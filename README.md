@@ -1,10 +1,6 @@
-# The Slate theme
+# crimsonmaple.github.io [Built using Slate Theme]
 
 [![Build Status](https://travis-ci.org/pages-themes/slate.svg?branch=master)](https://travis-ci.org/pages-themes/slate) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-slate.svg)](https://badge.fury.io/rb/jekyll-theme-slate)
-
-*Slate is a Jekyll theme for GitHub Pages. You can [preview the theme to see what it looks like](http://pages-themes.github.io/slate), or even [use it today](#usage).*
-
-![Thumbnail of slate](thumbnail.png)
 
 ## Usage
 
