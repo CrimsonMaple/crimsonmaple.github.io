@@ -1,6 +1,4 @@
- [](#header-1)ReiNand
- 
-[![License (GPL version 3)](https://img.shields.io/badge/license-GNU%20GPL%20version%203-red.svg?style=flat-square)](http://opensource.org/licenses/GPL-3.0)
+**ReiNand** [![License (GPL version 3)](https://img.shields.io/badge/license-GNU%20GPL%20version%203-red.svg?style=flat-square)](http://opensource.org/licenses/GPL-3.0)
 
 *The original open source N3DS CFW!*
 <sub> (now with O3DS support!)</sub>
