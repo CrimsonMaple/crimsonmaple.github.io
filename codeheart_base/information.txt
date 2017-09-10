@@ -1,0 +1,9 @@
+This JavaScript tech demo was written by CrimsonMaple for the Digital Maker Lab.
+This tech demo is using the codeheart.js engine for desktop use, with potential to extend to mobile space.
+
+It was made using sprites taken from Pokemon Black and White.
+
+The overworld map was made by LTSeraa for use in Pokemon RAZA, a Pokemon RPGXP Project
+Link to the overworld map: https://ltseraa.deviantart.com/art/Route-101-and-Littleroot-town-Pokemon-RAZA-307277684
+
+Credits to all the people who made this tech demo possible!
