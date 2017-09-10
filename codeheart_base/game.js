@@ -167,25 +167,38 @@ function move_player(){
 }
 
 function draw_player(){
-    var lastdrawn;
+    var last_drawn; // Default Player Icon.
     if (cpad.down){
         drawImage(loadImage("data/images/player_down_0.png"), player.position.x, player.position.y, 22+22, 26+26);
-        lastdrawn = drawImage(loadImage("data/images/player_down_0.png"), player.position.x, player.position.y, 22+22, 26+26);
+        last_drawn == "data/images/player_down_0.png";
     }
     if (cpad.up){
         drawImage(loadImage("data/images/player_up_0.png"), player.position.x, player.position.y, 22+22, 26+26);
-        lastdrawn = drawImage(loadImage("data/images/player_up_0.png"), player.position.x, player.position.y, 22+22, 26+26);
+        last_drawn == "data/images/player_up_0.png";
     }
     if (cpad.left){
         drawImage(loadImage("data/images/player_left_0.png"), player.position.x, player.position.y, 22+22, 26+26);
-        lastdrawn = drawImage(loadImage("data/images/player_left_0.png"), player.position.x, player.position.y, 22+22, 26+26);
+        last_drawn == "data/images/player_left_0.png";
     }
     if (cpad.right){
         drawImage(loadImage("data/images/player_right_0.png"), player.position.x, player.position.y, 22+22, 26+26);
-        lastdrawn = drawImage(loadImage("data/images/player_right_0.png"), player.position.x, player.position.y, 22+22, 26+26);
+        last_drawn == "data/images/player_right_0.png";
     }
-    else{
-        eval(lastdrawn);
+    
+    if(cpad.lastpressed == "magic" && player.action == IDLE){
+        drawImage(loadImage("data/images/player_down_0.png"), player.position.x, player.position.y, 22+22, 26+26);
+    }
+    if(cpad.lastpressed == "up" && player.action == IDLE){
+        drawImage(loadImage("data/images/player_up_0.png"), player.position.x, player.position.y, 22+22, 26+26);
+    }
+    if(cpad.lastpressed == "down" && player.action == IDLE){
+        drawImage(loadImage("data/images/player_down_0.png"), player.position.x, player.position.y, 22+22, 26+26);
+    }
+    if(cpad.lastpressed == "left" && player.action == IDLE){
+        drawImage(loadImage("data/images/player_left_0.png"), player.position.x, player.position.y, 22+22, 26+26);
+    }
+    if(cpad.lastpressed == "right" && player.action == IDLE){
+        drawImage(loadImage("data/images/player_right_0.png"), player.position.x, player.position.y, 22+22, 26+26);
     }
 }
 
@@ -215,19 +228,26 @@ function make_c_pad(){
     cpad.down  = false;
     cpad.left  = false;
     cpad.right = false;
+    
+    cpad.lastpressed = "magic";
 }
 
 function c_pad(value){
     if(key_name == "W"){
         cpad.up = value;
+        cpad.lastpressed = "up";
     }
     if(key_name == "S"){
         cpad.down = value;
+        cpad.lastpressed = "down";
     }
     if(key_name == "A"){
         cpad.left = value;
+        cpad.lastpressed = "left";
     }
     if(key_name == "D"){
         cpad.right = value;
+        cpad.lastpressed = "right";
     }
+    
 }
