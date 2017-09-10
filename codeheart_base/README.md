@@ -1,4 +1,4 @@
-#[Logo]:https://casual-effects.com/codeheart/title.png "codeheart.js"
+![alt text](https://casual-effects.com/codeheart/title.png "codeheart.js")
 
 ## Instructions: 
 1. Download play.html and game.js to a folder on your computer. Do not change the filenames.
