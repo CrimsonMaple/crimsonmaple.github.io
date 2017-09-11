@@ -174,22 +174,17 @@ function move_player(){
 }
 
 function draw_player(){
-    var last_drawn; // Default Player Icon.
     if (cpad.down){
         drawImage(loadImage("data/images/player_down_0.png"), player.position.x, player.position.y, 22+22, 26+26);
-        last_drawn == "data/images/player_down_0.png";
     }
     if (cpad.up){
         drawImage(loadImage("data/images/player_up_0.png"), player.position.x, player.position.y, 22+22, 26+26);
-        last_drawn == "data/images/player_up_0.png";
     }
     if (cpad.left){
         drawImage(loadImage("data/images/player_left_0.png"), player.position.x, player.position.y, 22+22, 26+26);
-        last_drawn == "data/images/player_left_0.png";
     }
     if (cpad.right){
         drawImage(loadImage("data/images/player_right_0.png"), player.position.x, player.position.y, 22+22, 26+26);
-        last_drawn == "data/images/player_right_0.png";
     }
     
     if(cpad.lastpressed == "magic" && player.action == IDLE){
