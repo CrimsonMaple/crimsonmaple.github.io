@@ -34,7 +34,7 @@ var key_name;
 //                      EVENT RULES                          //
 
 // When setup happens...
-function onSetup() {
+function onSetup(){
     // TODO: INITIALIZE your variables here
     key_pressed = 0;
     key_held = 0; // False
@@ -42,13 +42,13 @@ function onSetup() {
     // Load Map.
     clearRectangle(0, 0, screenWidth, screenHeight);
     
-    make_c_pad();
+    init_c_pad();
     
     init_player();
 }
 
 // When a key is pushed
-function onKeyStart(key) {
+function onKeyStart(key){
     key_pressed = key;
     convert_key_pressed(key);
     c_pad(true);
@@ -66,12 +66,13 @@ function onKeyEnd(key){
     key_pressed = 0;
     key_held = 0;
     c_pad(false);
+    cpad.held = 0;
     
     stopSound(sound);
 }
 
 // Called 30 times or more per second
-function onTick() {
+function onTick(){
     // Some simple drawing 
     draw_screen();
     // Start controls, and read per tick.
@@ -79,7 +80,8 @@ function onTick() {
     // Move player
     move_player();
     
-    //console.log(cpad.up);
+    console.log("action: " + player.action);
+    console.log("cpad log: " + cpad.held);
 }
 
 
@@ -112,30 +114,36 @@ function draw_screen(){
 }
 
 function init_controls(){
-    var speed = 200; // Pixels per Second
+    var speed = 160; // Pixels per Second
     var action = player.action;
     var angle;
     
     player.action = IDLE
     
-    if(cpad.right && !cpad.up && !cpad.down && !cpad.left){
+    if(cpad.right && cpad.held <= 1){
         player.direction = EAST;
         player.action = WALK;
     }
-    if(cpad.left && !cpad.up && !cpad.down && !cpad.right){
+    if(cpad.left && cpad.held <= 1){
         player.direction = WEST;
         player.action = WALK;
     }
-    if(cpad.down && !cpad.up && !cpad.right && !cpad.left){
+    if(cpad.down && cpad.held <= 1){
         player.direction = SOUTH;
         player.action = WALK;
     }
-    if(cpad.up && !cpad.down && !cpad.right && !cpad.left){
+    if(cpad.up && cpad.held <= 1){
         player.direction = NORTH;
         player.action = WALK;
     }
+    else if (cpad.held >= 2){
+        player.action = IDLE;
+    }
     
-    if (player.action == WALK) {
+    if(player.action == WALK){
+        if(cpad.held == 0){
+            alert("Movement error occured. Please refresh the page.");
+        }
         // Turn 90 degrees per direction
         angle = player.direction * PI / 2;
 
@@ -143,12 +151,13 @@ function init_controls(){
         // slightly different from 0, 1, or -1.
         player.velocity.x = round(cos(angle)) * speed;
         player.velocity.y = round(-sin(angle)) * speed;
-    } else {
+    }
+    else{
         player.velocity.x = 0;
         player.velocity.y = 0;
     }
 
-    if (action != player.action) {
+    if(action != player.action){
         // Reset the animation frame and timer
         player.animationTime  = 0;
         player.animationFrame = 0;
@@ -223,7 +232,7 @@ function init_player(){
     player.animation_time = 0;
 }
 
-function make_c_pad(){
+function init_c_pad(){
     cpad = makeObject();
     
     cpad.up    = false;
@@ -232,23 +241,29 @@ function make_c_pad(){
     cpad.right = false;
     
     cpad.lastpressed = "magic";
+    
+    cpad.held = 0;
 }
 
 function c_pad(value){
     if(key_name == "W"){
         cpad.up = value;
         cpad.lastpressed = "up";
+        cpad.held += 1;
     }
     if(key_name == "S"){
         cpad.down = value;
         cpad.lastpressed = "down";
+        cpad.held += 1;
     }
     if(key_name == "A"){
         cpad.left = value;
         cpad.lastpressed = "left";
+        cpad.held += 1;
     }
     if(key_name == "D"){
         cpad.right = value;
         cpad.lastpressed = "right";
+        cpad.held += 1;
     }
 }
