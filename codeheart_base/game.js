@@ -18,6 +18,7 @@ var IDLE = 2;
 var PI = 3.1415927;
 
 var animationrate = 3;
+var sound = loadSound("data/sound/some_music.mp3");
 
 ///////////////////////////////////////////////////////////////
 //                                                           //
@@ -55,12 +56,18 @@ function onKeyStart(key) {
     if (key_pressed != 0){
         key_held = 1; // True 
     }
+    
+    if(key_name == "K"){
+        playSound(sound, false);
+    }
 }
 
 function onKeyEnd(key){
     key_pressed = 0;
     key_held = 0;
     c_pad(false);
+    
+    stopSound(sound);
 }
 
 // Called 30 times or more per second
@@ -249,5 +256,4 @@ function c_pad(value){
         cpad.right = value;
         cpad.lastpressed = "right";
     }
-    
 }
