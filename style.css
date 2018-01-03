@@ -1,0 +1,27 @@
+body {
+    background-color: DarkSlateGrey;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
+    color: Azure;
+}
+
+/* Slim down sidebar */
+.w3-sidebar {
+    width: 60px;
+}
+
+/* Move over 60px */
+.w3-display-topleft {
+    left: 60px;
+}
+
+/* Padding because i'm lazy */
+.title-padding {
+    padding: 8px 7%!important
+}
+
+/* Left Margin for Sidebar */
+#main {
+    margin-left: 60px;
+}

