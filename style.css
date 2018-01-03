@@ -16,9 +16,19 @@ h1, h2, h3, h4, h5, h6 {
     left: 60px;
 }
 
+/* Move down to be lower than title */
+.w3-top {
+    top: 80px; /* Kinda a hack, not the best solution out there. */
+}
+
 /* Padding because i'm lazy */
 .title-padding {
     padding: 8px 7%!important
+}
+
+.content-padding {
+    padding-top:6%!important;
+    padding-bottom:6%!important
 }
 
 /* Left Margin for Sidebar */
