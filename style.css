@@ -1,9 +1,19 @@
 body {
     background-color: DarkSlateGrey;
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1, h2, h3, h4, h5, h6, h7, h8 {
     font-family: "Montserrat", sans-serif;
     color: Azure;
+}
+
+p {
+    font-size: 23px;
+    color: SlateGrey;
+}
+
+a:link {
+    color: MediumSlateGrey;
 }
 
 /* Slim down sidebar */
@@ -28,7 +38,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .content-padding {
     padding-top:6%!important;
-    padding-bottom:6%!important
+    padding-bottom:6%!important;
+}
+
+.content-padding-mobile {
+    padding-top:10%!important;
+    padding-bottom:10%!important;
+}
+
+.footer-padding {
+    padding-left: 5%!important;
 }
 
 /* Left Margin for Sidebar */
