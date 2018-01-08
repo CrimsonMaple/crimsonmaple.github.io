@@ -1,8 +1,14 @@
 body {
     background-color: DarkSlateGrey;
+    /*position: absolute;*/
 }
 
-h1, h2, h3, h4, h5, h6, h7, h8 {
+/* html {
+    overflow-y: scroll;
+    overflow-x:hidden;
+} */
+
+h1, h2, h3, h4, h5, h6 {
     font-family: "Montserrat", sans-serif;
     color: Azure;
 }
@@ -13,7 +19,7 @@ p {
 }
 
 a:link {
-    color: MediumSlateGrey;
+    color: Azure;
 }
 
 /* Slim down sidebar */
@@ -48,6 +54,22 @@ a:link {
 
 .footer-padding {
     padding-left: 5%!important;
+}
+
+.absolute-position {
+    position: absolute;
+}
+
+.fixed-position {
+    position: fixed;
+}
+
+/* Move down to be lower than title */
+.mobile-content-top {
+    position: absolute;
+    width:100%;
+    z-index:1;
+    top: 100px; /* Kinda a hack, not the best solution out there. */
 }
 
 /* Left Margin for Sidebar */
