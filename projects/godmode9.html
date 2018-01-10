@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!-- This is a comment -->
+        <title>Crimson's Blog</title>  <!-- Title for main page -->
+        <link rel="icon" href="images/favicon.png"> <!-- Icon at the left of the tab -->
+        
+        <meta charset = "UTF-8"> <!-- Use Unicode -->
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes website mobile friendly -->
+        
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!-- w3's css -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"> <!-- Fonts -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- Material theme buttons -->
+        <link rel="stylesheet" href="../style.css"> <!-- My CSS -->
+        
+        <nav class="w3-sidebar w3-bar-block w3-small w3-black w3-hide-small w3-center"> <!-- Icon Bar. Use Material Icons -->
+            <a href = "../index.html" class = "w3-bar-item w3-button w3-padding-16 w3-center"> <!-- Use 16px padding -->
+                <i class = "material-icons md-36">panorama_fish_eye</i> <!-- Home -->
+            </a>
+            
+            <a href = "../projects.html" class = "w3-bar-item w3-button w3-padding-16 w3-center"> <!-- Use 16px padding -->
+                <i class = "material-icons md-36">laptop</i> <!-- Projects -->
+            </a>
+            
+            <a href = "../games.html" class = "w3-bar-item w3-button w3-padding-16 w3-center"> <!-- Use 16px padding -->
+                <i class = "material-icons md-36">games</i> <!-- Games -->
+            </a>
+        </nav>
+        
+        <div class="w3-top w3-hide-large w3-hide-medium absolute-position" id="navbar"> <!-- Mobile Navbar -->
+            <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+                <a href="../index.html" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+                
+                <a href="../projects.html" class="w3-bar-item w3-button" style="width:25% !important">PROJECTS</a>
+                
+                <a href="../games.html" class="w3-bar-item w3-button" style="width:25% !important">GAMES</a>
+            </div>
+        </div>
+    </head>
+    
+    <body>
+        <div class = "w3-display-container">
+            <div class = "w3-container title-padding w3-display-topleft"> <!-- This is a hack that needs to be changed -->
+                <h1>クリムゾンメイプル</h1>
+            </div>
+            
+            <div class = "w3-container w3-padding w3-display-topleft w3-hide-small">
+                <img src = "https://avatars3.githubusercontent.com/u/16071436?s=460&v=4" class = "w3-circle w3-hover-greyscale w3-hover-shadow" style = "width: 15%" alt = "Profile Image">
+            </div>
+            
+            <div class = "w3-container w3-padding w3-hide-large w3-hide-medium">
+                <img src = "https://avatars3.githubusercontent.com/u/16071436?s=460&v=4" class = "w3-circle w3-hover-greyscale w3-hover-shadow" style = "width: 15%" alt = "Profile Image">
+            </div>
+            
+            <div class = "w3-container w3-top" style = "margin-left: 70px;!important;">
+                <div class = "w3-tag w3-round-large w3-black">
+                    <h3 class = "w3-text-blue">GodMode9</h3>
+                </div>
+                <hr />
+            </div>
+            
+            <!-- Add a card here with the Github Readme + Note that this is a fork, and add changes-->
+            <div class = "w3-container w3-content w3-top content-padding w3-hide-small" style="max-width:1200px; margin-left:230px;">
+                <div class = "w3-container w3-card-4 w3-white w3-margin-bottom" style = "overflow-y: scroll;">
+                    <h2 class = "w3-text-blue w3-padding-16">GodMode9<h2>
+                    <hr />
+                        <div class = "w3-container">
+                            <p style: "font-size: 2em;"><p><em>A full access file browser for the 3DS console</em></p>
+
+<p>GodMode9 is a full access file browser for the Nintendo 3DS console, giving you access to your SD card, to the FAT partitions inside your SysNAND and EmuNAND and to basically anything else. Among other functionality (see below), you can copy, delete, rename files and create folders.</p>
+
+<h2 id="warning">Warning</h2>
+
+<p><strong>This is powerful stuff</strong>, it provides you with the means to do basically any thinkable modification to any system data available on the 3DS console. However, precautions are taken so you don't accidentally damage the data of your console. The write permissions system protects you by providing warnings and forces you to enter an unlock sequence for enabling write permissions. It is not possible to overwrite or modify any important stuff without such unlock sequences and it is not possible to accidentally unlock something.</p>
+
+<p><strong>As always, be smart, keep backups, just to be safe</strong>.</p>
+
+<h2 id="quickstartguide">Quick start guide</h2>
+
+<p>These short instructions apply to all users who have <a href="https://github.com/SciresM/boot9strap">boot9strap</a> and <a href="https://github.com/AuroraWright/Luma3DS">Luma3DS</a> installed (Luma3DS set up with standard paths), which will be the majority of all GodMode9 users. Here's how to set it up quickly:</p>
+
+<ul>
+<li>Rename <code>GodMode9.firm</code> (from the release archive) to <code>X_GodMode9.firm</code> (change <code>X</code> to the button of your choice) and put it into <code>sd:/luma/payloads/</code></li>
+
+<li>Copy the <code>gm9</code> folder from the release archive to your SD card. Then, get good versions of <code>seeddb.bin</code> and <code>encTitleKeys.bin</code> from somewhere (don't ask me!) and put these two files into <code>sd:/gm9/support</code> (optional but recommended for full functionality).</li>
+
+<li>It is also recommended you setup the RTC clock if you're running GodMode9 for the first time. Find the option via HOME button -> <code>More...</code>. Also keep in mind that you should fix your system OS clock afterwards.</li>
+
+<li>Helpful hint #1: Go <a href="https://3ds.guide/godmode9-usage">here</a> for step by steps on doing some common tasks in GodMode9. Especially users coming from Decrypt9WIP or Hourglass9 may find this to be helpful.</li>
+
+<li>Helpful hint #2: <strong>Never unlock the red write permission level unless you know exactly what you're doing</strong>. You will notice that prompt when it comes up, it features a completely red screen. It is recommended you stay on the yellow permission level or below at all times to be completely safe. Also read more on the write permissions system below.</li>
+</ul>
+
+<p>You may now run GodMode9 via holding the X Button (or any other button you chose) at startup. See below for a list of stuff you can do with it.</p>
+
+<h2 id="howtorunthisdeveloperinfo">How to run this / developer info</h2>
+
+<p>Copy <code>GodMode9.firm</code> to somewhere on your SD card (maybe refer to your CFW instructions) and run it from there. FIRM payloads can be ran from <a href="https://github.com/AuroraWright/Luma3DS">Luma3DS</a>, <a href="https://github.com/SciresM/boot9strap">boot9strap</a> or from GodMode9 itself. Build this with <code>make firm</code> (requires <a href="https://github.com/TuxSH/firmtool">firmtool</a> installed).</p>
+
+<p>If you are a developer and you are building this, you may also just run <code>make release</code> to get a nice, release-ready package of all required files. To build <strong>SafeMode9</strong> (a bricksafe variant of GodMode9, with limited write permissions) instead of GodMode9, compile with <code>make SAFEMODE=1</code>. To switch screens, compile with <code>make SWITCH_SCREENS=1</code>. For additional customization, you may choose the internal font via <code>make FONT=6X10</code>, <code>make FONT=ACORN</code>, <code>make FONT=GB</code> or <code>make FONT=ORIG</code>.</p>
+
+<p>Further customization is possible by hardcoding <code>aeskeydb.bin</code> (just put the file into the data folder when compiling). To preset <code>M:/vram.mem</code> with data of your choice (a filesystem image, maybe) provide <code>vram0.img</code> inside the data folder, but keep in mind there's a hard 3MB limit. A standalone script runner is compiled by providing <code>autorun.gm9</code> (again, in the data folder). </p>
+
+<p>To build a .firm signed with SPI boot keys (for ntrboot and the like), run <code>make ntrboot</code>. You may need to rename the output files if the ntrboot installer you use uses hardcoded filenames. Some features such as boot9 / boot11 access are not currently available from the ntrboot environment.</p>
+
+<h2 id="bootloadermode">Bootloader mode</h2>
+
+<p>Same as <a href="https://github.com/SciresM/boot9strap">boot9strap</a>, GodMode9 can be installed to the system FIRM partition ('FIRM0'). When executed from a FIRM partition, GodMode9 will default to bootloader mode and try to boot, in order, <code>FIRM from FCRAM</code> (see <a href="https://github.com/d0k3/A9NC/releases">A9NC</a>), <code>0:/bootonce.firm</code> (will be deleted on a successful boot), <code>0:/boot.firm</code>, <code>1:/boot.firm</code>. In bootloader mode, hold R+LEFT on boot to enter the boot menu. <em>Installing GodMode9 to a FIRM partition is only recommended for developers and will overwrite <a href="https://github.com/SciresM/boot9strap">boot9strap</a></em>.</p>
+
+<h2 id="writepermissionssystem">Write permissions system</h2>
+
+<p>GodMode9 provides a write permissions system, which will protect you from accidentually damaging your system, losing data and/or modifying important system data. To unlock a write permission, an unlock sequence must be entered. This is not possible by accident. The write permission system is based on colors and the top bar on the top screen will change color according to the current write permission level. No permission above the yellow level can be unlocked on SafeMode9.</p>
+
+<ul>
+<li><strong>Green:</strong> Modification to system files is not possible on this permission level. You can't edit or delete savegames and installed data. However, keep in mind that any non-system related or custom stuff on your SD card is not protected.</li>
+
+<li><strong>Yellow:</strong> You can modify system files on this permission level. Data that is unique to your console and cannot be gotten from anywhere else is still not modifyable. Any damages you introduce can be fixed in software, but loss of savegames and installed data is possible if you are not careful. <strong>A NAND backup is highly recommended starting at this level.</strong></li>
+
+<li><strong>Orange:</strong> This is similar to the yellow permission level, but, in addition, allows edits to console unique data. Any damages you introduce are still fixable in software, but if you play around with this, <strong>having a NAND backup is an absolute requirement</strong>.</li>
+
+<li><strong>Red:</strong> The highest regular permission level. There are no limits to system file edits, and if you are not careful enough, you can brick your console and/or remove your A9LH/B9S installation. Bricks on this level may only be fixable in hardware. <strong>If you don't have a NAND backup at this point, you seem to have a deathwish for your console</strong>.</li>
+
+<li><strong>Blue:</strong> This permission level is reserved for edits to system memory. While, most likely, nothing bad at all will happen, consequences of edits can be unforeseen. There is even a (albeit very small) chance of bricking your console, maybe even permanently. <strong>Tread with caution on this level</strong>.</li>
+</ul>
+
+<h2 id="supportfiles">Support files</h2>
+
+<p>For certain functionality, GodMode9 may need 'support files'. Support files should be placed into <code>0:/gm9/support</code>. Support files contain additional information that is required in decryption operations. A list of support files, and what they do, is found below. Please don't ask for support files - find them yourself.</p>
+
+<ul>
+<li><strong><code>aeskeydb.bin</code></strong>: This should contain 0x25keyX, 0x18keyX and 0x1BkeyX to enable decryption of 7x / Secure3 / Secure4 encrypted NCCH files, 0x11key95 / 0x11key96 for FIRM decrypt support and 0x11keyOTP / 0x11keyIVOTP for 'secret' sector 0x96 crypto support. Entrypoints other than <a href="https://github.com/SciresM/boot9strap">boot9strap</a> may require a aeskeydb.bin file. A known perfect <code>aeskeydb.bin</code> can be found somewhere on the net, is exactly 1024 byte big and has an MD5 of A5B28945A7C051D7A0CD18AF0E580D1B. Have fun hunting!</li>
+
+<li><strong><code>seeddb.bin</code></strong>: This file is required to decrypt and mount seed encrypted NCCHs and CIAs if the seed in question is not installed to your NAND. Note that your seeddb.bin must also contain the seed for the specific game you need to decrypt.</li>
+
+<li><strong><code>encTitleKeys.bin</code></strong> / <strong><code>decTitleKeys.bin</code></strong>: These files are optional and provide titlekeys, which are required to create updatable CIAs from NCCH / NCSD files. CIAs created without these files will still work, but won't be updatable from eShop.</li>
+</ul>
+
+<h2 id="drivesingodmode9">Drives in GodMode9</h2>
+
+<p>GodMode9 provides access to system data via drives, a listing of what each drive contains and additional info follows below. Some of these drives are removable (such as drive <code>7:</code>), some will only turn up if they are available (drive <code>8:</code> and everything associated with EmuNAND, f.e.). Information on the 3DS console file system is also found on <a href="https://3dbrew.org/wiki/Flash_Filesystem">3Dbrew.org</a>.</p>
+
+<ul>
+<li><strong><code>0: SDCARD</code></strong>: The SD card currently inserted into the SD card slot. The <code>0:/Nintendo 3DS</code> folder contains software installs and extdata and is specially protected via the write permission system. The SD card can be unmounted from the root directory via the R+B buttons, otherwise the SD card is always available.</li>
+
+<li><strong><code>1: SYSNAND CTRNAND</code></strong>: The CTRNAND partition on SysNAND. This contains your 3DS console's operating system and system software installs. Data in here is protected by the write permissions system.</li>
+
+<li><strong><code>2: SYSNAND TWLN</code></strong>: The TWLN partition on SysNAND. This contains your 3DS console's TWL mode operating system and system software installs. Data in here is protected by the write permissions system.</li>
+
+<li><strong><code>3: SYSNAND TWLP</code></strong>: The TWLP partition on SysNAND. This contains photos taken while in TWL mode.</li>
+
+<li><strong><code>A: SYSNAND SD</code></strong>: This drive is used for special access to data on your SD card. It actually links to a subfolder inside <code>0:/Nintendo 3DS</code> and contains software and extdata installed to SD from SysNAND. Crypto in this folder is handled only when accessed via the <code>A:</code> drive (not from <code>0:</code>). This is protected by the write permissions system.</li>
+
+<li><strong><code>S: SYSNAND VIRTUAL</code></strong>: This drive provides access to all partitions of the SysNAND, some of them critical for base system functionality. This is protected by the write permissions system, but, when unlocked, modifications can brick the system.</li>
+
+<li><strong><code>4: EMUNAND CTRNAND</code></strong>: Same as <code>1:</code>, but handles the CTRNAND on EmuNAND. For multi EmuNAND setups, the currently active EmuNAND partition can be switched via the HOME menu.</li>
+
+<li><strong><code>5: EMUNAND TWLN</code></strong>: Same as <code>2</code>, but handles TWLN on EmuNAND. No write protection here, cause this partition is never used on EmuNAND.</li>
+
+<li><strong><code>6: EMUNAND TWLP</code></strong>: Same as <code>3</code>, but handles TWLP on EmuNAND.</li>
+
+<li><strong><code>B: EMUNAND SD</code></strong>: Same as <code>A:</code>, but handles the <code>0:/Nintendo 3DS</code> subfolder associated with EmuNAND. In case of linked NANDs, this is identical with <code>A:</code>. This is also protected by the write permissions system.</li>
+
+<li><strong><code>E: EMUNAND VIRTUAL</code></strong>: Same as <code>S:</code>, but handles system partitions on EmuNAND. No bricking risk here as EmuNAND is never critical to system functionality.</li>
+
+<li><strong><code>7: FAT IMAGE / IMGNAND CTRNAND</code></strong>: This provides access to mounted FAT images. When a NAND image is mounted, it provides access to the mounted NAND image's CTRNAND.</li>
+
+<li><strong><code>8: BONUS DRIVE / IMGNAND TWLN</code></strong>: This provides access to the bonus drive on SysNAND. The bonus drive can be setup via the HOME menu on 3DS consoles that provide the space for it. When a NAND image is mounted, this provides access to the mounted NAND image's TWLN.</li>
+
+<li><strong><code>9: RAM DRIVE / IMGNAND TWLP</code></strong>: This provides access to the RAM drive. All data stored inside the RAM drive is temporary and will be wiped after a reboot. When a NAND image is mounted, this provides access to the mounted NAND image's TWLP.</li>
+
+<li><strong><code>I: IMGNAND VIRTUAL</code></strong>: When a NAND image is mounted, this provides access to the partitions inside the NAND image.</li>
+
+<li><strong><code>C: GAMECART</code></strong>: This is read-only and provides access to the game cartridge currently inserted into the cart slot. This can be used for dumps of CTR and TWL mode cartridges. Flash cards are supported only to a limited extent.</li>
+
+<li><strong><code>G: GAME IMAGE</code></strong>: CIA/NCSD/NCCH/EXEFS/ROMFS/FIRM images can be accessed via this drive when mounted. This is read-only.</li>
+
+<li><strong><code>T: TICKET.DB IMAGE</code></strong>: Ticket database files can be mounted and accessed via this drive. This provides easy and quick access to all tickets inside the <code>ticket.db</code>. This is read-only.</li>
+
+<li><strong><code>M: MEMORY VIRTUAL</code></strong>: This provides access to various memory regions. This is protected by a special write permission, and caution is advised when doing modifications inside this drive. This drive also gives access to <code>boot9.bin</code>, <code>boot11.bin</code> and <code>otp.bin</code> (sighaxed systems only).</li>
+
+<li><strong><code>X: NAND XORPADS</code></strong>: This drive contains XORpads for all NAND partitions. XORpads can be used to decrypt NAND partitions outside of the 3DS console with the help of <a href="https://github.com/d0k3/3DSFAT16tool/releases">additional software</a>. This is read-only.</li>
+
+<li><strong><code>Z: LAST SEARCH</code></strong>: After a search operation, search results are found inside this drive. The drive can be accessed at a later point to return to the former search results.</li>
+</ul>
+
+<h2 id="whatyoucandowithgodmode9">What you can do with GodMode9</h2>
+
+<p>With the possibilites GodMode9 provides, not everything may be obvious at first glance. In short, <strong>GodMode9 includes improved versions of basically everything that Decrypt9 has, and more</strong>. Any kind of dumps and injections are handled via standard copy operations and more specific operations are found inside the A button menu. The A button menu also works for batch operations when multiple files are selected. For your convenience a (incomplete!) list of what GodMode9 can do follows below.</p>
+
+<h3 id="basicfunctionality">Basic functionality</h3>
+
+<ul>
+<li><strong>Manage files on all your data storages</strong>: You wouldn't have expected this, right? Included are all standard file operations such as copy, delete, rename files and create folders. Use the L button to mark multiple files and apply file operations to multiple files at once.</li>
+
+<li><strong>Make screenshots</strong>: Press R+L anywhere. Screenshots are in BMP format.</li>
+
+<li><strong>Use multiple panes</strong>: Press R+left|right. This enables you to stay in one location in the first pane and open another in the second pane.</li>
+
+<li><strong>Search drives and folders</strong>: Just press R+A on the drive / folder you want to search.</li>
+
+<li><strong>Compare and verify files</strong>: Press the A button on the first file, select <code>Calculate SHA-256</code>. Do the same for the second file. If the two files are identical, you will get a message about them being identical. On the SDCARD drive (<code>0:</code>) you can also write a SHA file, so you can check for any modifications at a later point.</li>
+
+<li><strong>Hexview and hexedit any file</strong>: Press the A button on a file and select <code>Show in Hexeditor</code>. A button again enables edit mode, hold the A button and press arrow buttons to edit bytes. You will get an additional confirmation prompt to take over changes. Take note that for certain files, write permissions can't be enabled.</li>
+
+<li><strong>View text files in a text viewer</strong>: Press the A button on a file and select <code>Show in Textviewer</code> (only shows up for actual text files). You can enable wordwrapped mode via R+Y, and navigate around the file via R+X and the dpad.</li>
+
+<li><strong>Chainload FIRM payloads</strong>: Press the A button on a FIRM file, select <code>FIRM options</code> -> <code>Boot FIRM</code>. Keep in mind you should not run FIRMs from dubious sources and that the write permissions system is no more in place after booting a payload.</li>
+
+<li><strong>Chainload FIRM payloads from a neat menu</strong>: The <code>payloads</code> menu is found inside the HOME button menu. It provides any FIRM found in <code>0:/gm9/payloads</code> for quick chainloading. </li>
+
+<li><strong>Inject a file to another file</strong>: Put exactly one file (the file to be injected from) into the clipboard (via the Y button). Press A on the file to be injected to. There will be an option to inject the first file into it.</li>
+</ul>
+
+<h3 id="scriptingfunctionality">Scripting functionality</h3>
+
+<ul>
+<li><strong>Run .gm9 scripts from anywhere on your SD card</strong>: You can run scripts in .gm9 format via the A button menu. .gm9 scripts use a shell-like language and can be edited in any text editor. For an overview of usable commands have a look into the <code>HelloScript.gm9</code> included in the release archive. <em>Don't run scripts from untrusted sources.</em></li>
+
+<li><strong>Run .gm9 scripts via a neat menu</strong>: Press the HOME button, select <code>More...</code> -> <code>Scripts...</code>. Any script you put into <code>0:/gm9/scripts</code> (subdirs included) will be found here. Scripts ran via this method won't have the confirmation at the beginning either.</li>
+</ul>
+
+<h3 id="sdcardhandling">SD card handling</h3>
+
+<ul>
+<li><strong>Format your SD card / setup an EmuNAND</strong>: Press the HOME button, select <code>More...</code> -> <code>SD format menu</code>. This also allows to setup a RedNAND or GW type EmuNAND on your SD card. You will get a warning prompt and an unlock sequence before any operation starts.</li>
+
+<li><strong>Handle multiple EmuNANDs</strong>: Press the HOME button, select <code>More...</code> -> <code>Switch EmuNAND</code> to switch between EmuNANDs / RedNANDs. (Only available on multi EmuNAND / RedNAND systems.)</li>
+
+<li><strong>Run it without an SD card / unmount the SD card</strong>: If no SD card is found, you will be offered to run without the SD card. You can also unmount and remount your SD card from the file system root at any point.</li>
+
+<li><strong>Direct access to SD installed contents</strong>: Just take a look inside the <code>A:</code>/<code>B:</code> drives. On-the-fly-crypto is taken care for, you can access this the same as any other content.</li>
+
+<li><strong>Set (and use) the RTC clock</strong>: For correct modification / creation dates in your file system, you need to setup the RTC clock first. Press the HOME Button and select <code>More...</code> to find the option. Keep in mind that modifying the RTC clock means you should also fix system OS time afterwards.</li>
+</ul>
+
+<h3 id="gamefilehandling">Game file handling</h3>
+
+<ul>
+<li><strong>List titles installed on your system</strong>: Press R+A on a /title dir or a subdir below that (such dirs are found on <code>CTRNAND</code>, <code>TWLN</code> and on <code>A:</code>/<code>B:</code>). This will list all titles installed in the selected location. Works best with the below two features.</li>
+
+<li><strong>Build CIAs from NCCH / NCSD (.3DS) / TMD (installed contents)</strong>: Press A on the file you want converted and the option will be shown. Installed contents are found (among others) in <code>1:/titles/</code>(SysNAND) and <code>A:/titles/</code>(SD installed). Where applicable, you will also be able to generate legit CIAs. Note: this works also from a file search and title listing.</li>
+
+<li><strong>Dump CXIs / NDS from TMD (installed contents)</strong>: This works the same as building CIAs, but dumps decrypted CXIs or NDS rom dumps instead. Note: this works also from a file search and title listing.</li>
+
+<li><strong>Decrypt, encrypt and verify NCCH / NCSD / CIA / BOSS / FIRM images</strong>: Options are found inside the A button menu. You will be able to decrypt/encrypt to the standard output directory or (where applicable) in place.</li>
+
+<li><strong>Decrypt content downloaded from CDN / NUS</strong>: Press A on the file you want decrypted. For this to work, you need at least a TMD file (<code>encTitlekeys.bin</code> / <code>decTitlekeys.bin</code> also required, see <em>Support files</em> below) or a CETK file. Either keep the names provided by CDN / NUS, or rename the downloaded content to <code>(anything).nus</code> or <code>(anything).cdn</code> and the CETK to <code>(anything).cetk</code>.</li>
+
+<li><strong>Batch mode for the above operations</strong>: Just select multiple files of the same type via the L button, then press the A button on one of the selected files.</li>
+
+<li><strong>Access any file inside NCCH / NCSD / CIA / FIRM / NDS images</strong>: Just mount the file via the A button menu and browse to the file you want. For CDN / NUS content, prior decryption is required for full access.</li>
+
+<li><strong>Rename your NCCH / NCSD / CIA / NDS files to proper names</strong>: Find this feature inside the A button menu. Proper names include title id, game name, product code and region.</li>
+
+<li><strong>Dump 3DS / NDS / DSi type retail game cartridges</strong>: Insert the cartridge and take a look inside the <code>C:</code> drive. You may also dump private headers from 3DS game cartridges.</li>
+</ul>
+
+<h3 id="nandhandling">NAND handling</h3>
+
+<ul>
+<li><strong>Directly mount and access NAND dumps or standard FAT images</strong>: Just press the A button on these files to get the option. You can only mount NAND dumps from the same console.</li>
+
+<li><strong>Restore NAND dumps while keeping your A9LH / sighax installation intact</strong>: Select <code>Restore SysNAND (safe)</code> from inside the A button menu for NAND dumps.</li>
+
+<li><strong>Restore / dump NAND partitions or even full NANDs</strong>: Just take a look into the <code>S:</code> (or <code>E:</code>/ <code>I:</code>) drive. This is done the same as any other file operation.</li>
+
+<li><strong>Transfer CTRNAND images between systems</strong>: Transfer the file located at <code>S:/ctrnand_full.bin</code> (or <code>E:</code>/ <code>I:</code>). On the receiving system, press A, select <code>CTRNAND Options...</code>, then <code>Transfer to NAND</code>.</li>
+
+<li><strong>Embed an essential backup right into a NAND dump</strong>: This is available in the A button menu for NAND dumps. Essential backups contain NAND header, <code>movable.sed</code>, <code>LocalFriendCodeSeed_B</code>, <code>SecureInfo_A</code>, NAND CID and OTP. If your local SysNAND does not contain an embedded backup, you will be asked to do one at startup.</li>
+
+<li><strong>Install FIRM files to your NAND</strong>: Found inside the A button menu for FIRM files, select <code>FIRM options</code> -> <code>Install FIRM</code>. <strong>Use this with caution</strong> - installing an incompatible FIRM file will lead to a <strong>brick</strong>.</li>
+
+<li><strong>Actually use that extra NAND space</strong>: You can setup a <strong>bonus drive</strong> via the HOME menu, which will be available via drive letter <code>8:</code>. (Only available on systems that have the extra space.)</li>
+
+<li><strong>Fix certain problems on your NANDs</strong>: You can fix CMACs for a whole drive (works on <code>A:</code>, <code>B:</code>, <code>S:</code> and <code>E:</code>) via an entry in the R+A button menu, or even restore borked NAND headers back to a functional state (inside the A button menu of borked NANDs and available for <code>S:/nand_hdr.bin</code>). Recommended only for advanced users!</li>
+</ul>
+
+<h3 id="systemfilehandling">System file handling</h3>
+
+<ul>
+<li><strong>Check and fix CMACs (for any file that has them)</strong>: The option will turn up in the A button menu if it is available for a given file (f.e. system savegames, <code>ticket.db</code>, etc...). This can also be done for multiple files at once if they are marked.</li>
+
+<li><strong>Mount ticket.db files and dump tickets</strong>: Mount the file via the A button menu. Tickets are sorted into <code>eshop</code> (stuff from eshop, probably legit), <code>system</code> (system tickets, probably legit) and <code>unknown</code> (everything else, never legit) categories.</li>
+
+<li><strong>Inject any NCCH CXI file into Health &amp; Safety</strong>: The option is found inside the A button menu for any NCCH CXI file. NCCH CXIs are found, f.e. inside of CIAs. Keep in mind there is a (system internal) size restriction on H&amp;S injectable apps.</li>
+
+<li><strong>Inject and dump GBA VC saves</strong>: Look for a file called <code>gbavc.sav</code> inside the <code>S:</code> drive. Keep in mind that you need to start the specific GBA game on your console before dumping / injecting the save.</li>
+
+<li><strong>Dump a copy of boot9, boot11 &amp; your OTP</strong>: This works on sighax, via boot9strap only. These files are found inside the <code>M:</code> drive and can be copied from there to any other place.</li>
+</ul>
+
+<h3 id="supportfilehandling">Support file handling</h3>
+
+<ul>
+<li><strong>Build <code>decTitleKeys.bin</code> / <code>encTitleKeys.bin</code> / <code>seeddb.bin</code></strong>: Press the HOME button, select <code>More...</code> -> <code>Build support files</code>. <code>decTitleKeys.bin</code> / <code>encTitleKeys.bin</code> can also be created / merged from tickets, <code>ticket.db</code> and other <code>decTitleKeys.bin</code> / <code>encTitleKeys.bin</code> files via the A button menu.</li>
+
+<li><strong>Build, mount, decrypt and encrypt <code>aeskeydb.bin</code></strong>: AES key databases can be built from other <code>aeskeydb.bin</code> or legacy <code>slot??Key?.bin</code> files. Just select one or more files, press A on one of them and then select <code>Build aeskeydb.bin</code>. Options for mounting, decrypting and encrypting are also found in the A button menu.</li>
+
+<li><strong>Generate XORpads from <code>ncchinfo.bin</code> files</strong>: Start this via the appropriate entry inside the A button menu.</li>
+
+<li><strong>Generate XORpads for any NAND partition</strong>: Take a look inside the <code>X:</code> drive. You can use these XORpads for decryption of encrypted NAND images on PC. Additional tools such as <a href="https://github.com/d0k3/3DSFAT16tool/releases">3dsFAT16Tool</a> are required on PC.</li>
+</ul>
+
+<h2 id="license">License</h2>
+
+<p>You may use this under the terms of the GNU General Public License GPL v2 or under the terms of any later revisions of the GPL. Refer to the provided <code>LICENSE.txt</code> file for further information.</p>
+
+<h2 id="credits">Credits</h2>
+
+<p>This tool would not have been possible without the help of numerous people. Thanks go to (in no particular order)...</p>
+
+<ul>
+<li><strong>Archshift</strong>, for providing the base project infrastructure</li>
+
+<li><strong>Normmatt</strong>, for sdmmc.c / sdmmc.h and gamecart code, and for being of great help on countless other occasions</li>
+
+<li><strong>Cha(N)</strong>, <strong>Kane49</strong>, and all other FatFS contributors for <a href="http://elm-chan.org/fsw/ff/00index_e.html">FatFS</a></li>
+
+<li><strong>SciresM</strong> for helping me figure out RomFS and for boot9strap</li>
+
+<li><strong>SciresM</strong>, <strong>Myria</strong>, <strong>Normmatt</strong>, <strong>TuxSH</strong> and <strong>hedgeberg</strong> for figuring out sighax and giving us access to bootrom</li>
+
+<li><strong>ihaveamac</strong> for first developing the simple CIA generation method and for being of great help in porting it</li>
+
+<li><strong>b1l1s</strong> for helping me figure out A9LH compatibility</li>
+
+<li><strong>Gelex</strong> and <strong>AuroraWright</strong> for helping me figure out various things</li>
+
+<li><strong>stuckpixel</strong> for the new 6x10 font and help on various things</li>
+
+<li><strong>Wolfvak</strong> for all ARM11 code, for the FIRM binary launcher, for the exception handlers and for help on countless other occasions</li>
+
+<li><strong>Al3x_10m</strong> for help with countless hours of testing and useful advice</li>
+
+<li><strong>WinterMute</strong> for helping me with his vast knowledge on everything gamecart related</li>
+
+<li><strong>profi200</strong> for always useful advice and helpful hints on various things</li>
+
+<li><strong>JaySea</strong>, <strong>YodaDaCoda</strong>, <strong>liomajor</strong>, <strong>Supster131</strong>, <strong>imanoob</strong>, <strong>Kasher_CS</strong> and countless others from freenode #Cakey and the GBAtemp forums for testing, feedback and helpful hints</li>
+
+<li><strong>Shadowhand</strong> for being awesome and <a href="https://d0k3.secretalgorithm.com/">hosting my nightlies</a></li>
+
+<li><strong>Plailect</strong> for putting his trust in my tools and recommending this in <a href="https://3ds.guide/">The Guide</a></li>
+
+<li><strong>Lasse Reinhold</strong> for <a href="http://www.quicklz.com/">QuickLZ</a></li>
+
+<li><strong>Project Nayuki</strong> for <a href="https://github.com/nayuki/QR-Code-generator">qrcodegen</a></li>
+
+<li><strong>Amazingmax fonts</strong> for the Amazdoom font</li>
+
+<li>The fine folks on <strong>freenode #Cakey</strong></li>
+
+<li>All <strong><a href="https://www.3dbrew.org/wiki/Main_Page">3dbrew.org</a> editors</strong></li>
+
+<li>Everyone I possibly forgot, if you think you deserve to be mentioned, just contact me!</li>
+</ul></p>
+                        </div> <!-- Reformat this ugly af markdown and fix scrolling again.. -->
+                </div>
+            </div>
+    </body>
+</html>

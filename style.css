@@ -64,6 +64,12 @@ a:link {
     position: fixed;
 }
 
+.grid_container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: .5%;
+}
+
 /* Move down to be lower than title */
 .mobile-content-top {
     position: absolute;

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!-- This is a comment -->
+        <title>Crimson's Blog</title>  <!-- Title for main page -->
+        <link rel="icon" href="images/favicon.png"> <!-- Icon at the left of the tab -->
+        
+        <meta charset = "UTF-8"> <!-- Use Unicode -->
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes website mobile friendly -->
+        
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!-- w3's css -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"> <!-- Fonts -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- Material theme buttons -->
+        <link rel="stylesheet" href="../style.css"> <!-- My CSS -->
+        
+        <nav class="w3-sidebar w3-bar-block w3-small w3-black w3-hide-small w3-center"> <!-- Icon Bar. Use Material Icons -->
+            <a href = "../index.html" class = "w3-bar-item w3-button w3-padding-16 w3-center"> <!-- Use 16px padding -->
+                <i class = "material-icons md-36">panorama_fish_eye</i> <!-- Home -->
+            </a>
+            
+            <a href = "../projects.html" class = "w3-bar-item w3-button w3-padding-16 w3-center"> <!-- Use 16px padding -->
+                <i class = "material-icons md-36">laptop</i> <!-- Projects -->
+            </a>
+            
+            <a href = "../games.html" class = "w3-bar-item w3-button w3-padding-16 w3-center"> <!-- Use 16px padding -->
+                <i class = "material-icons md-36">games</i> <!-- Games -->
+            </a>
+        </nav>
+        
+        <div class="w3-top w3-hide-large w3-hide-medium absolute-position" id="navbar"> <!-- Mobile Navbar -->
+            <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+                <a href="../index.html" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+                
+                <a href="../projects.html" class="w3-bar-item w3-button" style="width:25% !important">PROJECTS</a>
+                
+                <a href="../games.html" class="w3-bar-item w3-button" style="width:25% !important">GAMES</a>
+            </div>
+        </div>
+    </head>
+    
+    <body>
+        <div class = "w3-display-container">
+            <div class = "w3-container title-padding w3-display-topleft"> <!-- This is a hack that needs to be changed -->
+                <h1>クリムゾンメイプル</h1>
+            </div>
+            
+            <div class = "w3-container w3-padding w3-display-topleft w3-hide-small">
+                <img src = "https://avatars3.githubusercontent.com/u/16071436?s=460&v=4" class = "w3-circle w3-hover-greyscale w3-hover-shadow" style = "width: 15%" alt = "Profile Image">
+            </div>
+            
+            <div class = "w3-container w3-padding w3-hide-large w3-hide-medium">
+                <img src = "https://avatars3.githubusercontent.com/u/16071436?s=460&v=4" class = "w3-circle w3-hover-greyscale w3-hover-shadow" style = "width: 15%" alt = "Profile Image">
+            </div>
+            
+            <div class = "w3-container w3-top" style = "margin-left: 70px;!important;">
+                <div class = "w3-tag w3-round-large w3-black">
+                    <h3 class = "w3-text-red">Rei-Six</h3>
+                </div>
+                <hr />
+            </div>
+            
+            <!-- Add a card here with the Github Readme -->
+            <div class = "w3-container w3-content w3-top content-padding w3-hide-small" style="max-width:1200px; margin-left:230px;">
+                <div class = "w3-container w3-card-4 w3-white w3-margin-bottom" style = "overflow-y: scroll;">
+                    <h2 class = "w3-text-red w3-padding-16">Rei-Six<h2>
+                    <hr />
+                        <div class = "w3-container">
+<p><a href="http://opensource.org/licenses/GPL-3.0"><img src="https://img.shields.io/badge/license-GNU%20GPL%20version%203-red.svg?style=flat-square" alt="License (GPL version 3)" /></a></p>
+<p><em>The original open source (N)3DS CFW!</em></p>
+
+<p><strong>Compiling:</strong></p>
+
+<p>You'll need armips, bin2c and firmtool added to your Path. <a href="https://reisyukaku.org/downloads/buildtools.zip">HERE</a> are the pre-compiled binaries for Windows.</p>
+
+<p>make - Compiles Everything.</p>
+<p>make sighax - Compiles boot9Strap payload</p>
+
+<p>Copy everything in 'out' folder to SD root and run!</p>
+
+<p><strong>Features:</strong></p>
+
+<ul>
+<li><p>B9S support!</p></li>
+
+<li><p>Emunand/Patched Sysnand (with '.:Rei' version string)</p></li>
+
+<li><p>Sig checks disabled</p></li>
+
+<li><p>Reboot Patch</p></li>
+
+<li><p>AGB/TWL Patches</p></li>
+
+<li><p>Flashcart Whitelist Patch</p></li>
+
+<li><p>LGY FIRM patches</p></li>
+
+<li><p>Firm partition update protection</p></li>
+
+<li><p>Ability to modify splash screen</p></li>
+
+<li><p>Ability to modify process patches</p>
+
+<p><ul>
+<li>Region free CIAs</li></p>
+
+<p><li>Region free Carts</li></p>
+
+<p><li>Auto updates disabled</li></p>
+
+<p><li>EShop update check disabled</li></p>
+
+<p><li>RO verification disabled</li></p>
+
+<p><li>and <a href="https://reisyukaku.org/3DS/ReiNand/patches">MORE</a></li></ul>
+
+<p></p></li>
+</ul></p>
+
+<p><strong>Credits:</strong></p>
+
+<p><a href="https://github.com/CrimsonMaple/Rei-Six/wiki/Credits">Link to Credits on our Wiki!</a></p>
+                        </div> <!-- Reformat this ugly af markdown and fix scrolling again.. -->
+                </div>
+            </div>
+    </body>
+</html>
