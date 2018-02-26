@@ -59,9 +59,70 @@
             <!-- Main content --> <!-- Newest Content Comes First -->
             <div class = "w3-container w3-content content-padding w3-hide-small" style="max-width:1200px;">
                 <div class = "w3-container w3-card-4 w3-white w3-margin-bottom">
+                    <h2 class = "w3-text-grey w3-padding-16">EasyCTF NoSource + NoSource Jr Writeup<h2>
+                        <div class = "w3-container">
+                            <h6 class = "w3-text-blue-grey"><i class = "material-icons md-18">event_note</i>  February 25th, 2018 - <span class = "w3-tag w3-blue-grey w3-round">Latest</span></h6>
+                        </div>
+                    <hr />
+                        <div class = "w3-container"> <!-- Don't mind my mess. I know it's bad... -->
+                            <p>Hey! This is Crimson! I kinda had an interesting idea. I just did a CTF for practice called "EasyCTF". Which was my first ever. One of the things i'm rather good at is snooping around website source code. I got into the habit of doing it to bypass things on my local newspaper.<br /><i><s>NO I DON'T WANT TO PAY FOR A SUBSCRIPTION! I JUST NEED YOU FOR SCHOOL!</s></i><br /> Well one of the problems was called "NoSource" and was listed as a 250 point question. I wanted to take that one down. But first there was a smaller one.. "NoSource Jr". So I took that one on first.</p>
+
+<p>The first thing I did when I looked at the website presented to me. Was well... Inspect Element. <i>YOU CAN'T STOP ME!</i> Gotta love when the first thing you are greeted to is:</p>
+
+<blockquote class="w3-panel w3-leftbar w3-light-grey">
+	<code class="w3-text-green"><!-- Stop looking at the source code --></code>
+</blockquote>
+
+<p>Take a look inside... and you find a variable named <code>flag</code>.</p>
+
+<blockquote class="w3-panel w3-leftbar w3-light-grey">
+	<code class="w3-text-blue" style="font-size: 0.9em">Fg4GCRoHCQ4TFh0IBxENAE4qEgwHMBsfDiwJRQImHV8GQAwBDEYvV11BCA==</code>
+</blockquote>
+
+<p>Great! So now we just throw that in the solution! Nope. Notice how the flag is base 64 encoded. Great. That's always fun. So I decode it using <code>btoa(flag);</code><br />tThat doesn't work at all. That's not even text anymore. Something is happening to it. Obviously. It's a little block of code called <code>process</code>. Which essentually xors the key and the flag! Cool so we just need to find the flag and pump this through the function. I looked at the source and found the key. <i>"nosource"</i>.  Well, lord brilliance decided, "I can bruteforce this!". I couldn't. I spent a few hours writing a bruteforcer and failed. It wouldn't have worked. So instead I popped the key and flag through the function <code>process</code>. What would you guess?! It gives text and something that at least resembles a key!</p>
+
+<blockquote class="w3-panel w3-leftbar w3-light-grey">
+	<code class="w3-text-black">xaufoujk}yngrcne EacrBxz`Cz*wT~:h/�ny4L23.{</code>
+</blockquote>
+
+<p>Okay, maybe it doesn't. But we are closer!<br />With the help of a friend I figured this bit out. Ever remember sitting in Physics. Learning how to use one formula to calculate force from mass and the force of gravity? Know how it is kind of a triangle? It's the same thing with this. Only we are dealing with our: Output, Flag and Key. So we know the flag. It's a garbled mess of base64. We don't know the key. But we do know some of the result... There is one thing constant in every single key. The string: <i>easyctf{</i>. So if we put the result in for the key. We should get the ACTUAL key! Guess what happened?! We got it.</p>
+
+<blockquote class="w3-panel w3-leftbar w3-light-grey">
+	<code class="w3-text-black">soupysouvwnqdek{+KaudD}dkMz<aR{$c!�xo2I,8 {</code>
+</blockquote>
+
+<p>I plugged in "soupy" for key and got our final result flag!</p>
+
+<blockquote class="w3-panel w3-leftbar w3-light-grey">
+	<code class="w3-text-black">easyctf{congrats!_but_now_f0r_n0s0urc3_...}</code>
+</blockquote>
+
+<p>That wasn't so bad! Onto the next one! The biggest issue for the next one, was not being able to use Firefox. That dissappointed me... I had to pull out Chrome. But looking through. YOU CAN'T USE INSPECT ELEMENT. Well, you can. But if you interact with anything, you are going to get souped. Quite literally...<br />So. moving past that... I looked through the source. Couldn't find a flag. Hmm. Must be in that login page. But you can't pull the source from it that quickly. Or so I thought. Looking through the linked StackExchange page. I saw someone say you can use a web debugger to look and pull source. Specifically Fiddler. So I downloaded Fiddler. What would you guess? I pulled the login page. Easy as pie. Thanks StackExchange! You really are the savior to all developers! Looking through the source. I quickly found the flag!</p>
+
+<blockquote class="w3-panel w3-leftbar w3-light-grey">
+	<code class="w3-text-blue" style="font-size: 0.9em">DQ4cJgsbCVofB18sNw4wRlhfCwAbXxpTC1wwKVlcGBIaUDAGJzowYDoqTiI=</code>
+</blockquote>
+
+<p>Guess what else? The SAME function was used! This means we can use our code for nosource jr on nosource! Awesome!<br />So I dialed in the Flag and <i>"easyctf{"</i> as the key! This gave me the real key! Same as last time!</p>
+
+<blockquote class="w3-panel w3-leftbar w3-light-grey">
+	<code class="w3-text-black">easyctf{wh0s_a_g00d_s0urc3_v13w3r?_YOU_ARE!}</code>
+</blockquote>
+
+<p>Checkmate.</p>
+
+<p>Source Code: <a href="https://gist.github.com/CrimsonMaple/1c04691eb9a296eb56fcad17a615177c">https://gist.github.com/CrimsonMaple/1c04691eb9a296eb56fcad17a615177c</a>
+
+<h5>Hey if you enjoyed this, please message me on Twitter! Tell me to keep this up! I really like this kinda stuff and will continue to do things like this!</h5>
+                        </div>
+                </div>
+            </div>
+            
+            <div class = "w3-container w3-content content-padding w3-hide-small" style="max-width:1200px;">
+                <div class = "w3-container w3-card-4 w3-white w3-margin-bottom">
                     <h2 class = "w3-text-grey w3-padding-16">This is a title for a blog entry 2<h2>
                         <div class = "w3-container">
-                            <h6 class = "w3-text-blue-grey"><i class = "material-icons md-18">event_note</i>  January 8th, 2018 - <span class = "w3-tag w3-blue-grey w3-round">Latest</span></h6>
+                            <h6 class = "w3-text-blue-grey"><i class = "material-icons md-18">event_note</i>  January 8th, 2018 </h6>
                         </div>
                     <hr />
                         <div class = "w3-container">
@@ -86,13 +147,61 @@
         <!-- Mobile Main Content --> <!-- Only Show Latest Post on Mobile -->
             <div class = "w3-container w3-content content-padding-mobile mobile-content-top w3-hide-large w3-hide-medium" style="max-width:1200px;">
                 <div class = "w3-container w3-card-4 w3-white w3-margin-bottom">
-                    <h2 class = "w3-text-grey w3-padding-16">This is a title for a blog entry 2<h2>
+                    <h2 class = "w3-text-grey w3-padding-16">EasyCTF NoSource + NoSource Jr Writeup<h2>
                         <div class = "w3-container">
-                            <h6 class = "w3-text-blue-grey"><i class = "material-icons md-18">event_note</i>  January 8th, 2018 - <span class = "w3-tag w3-blue-grey w3-round">Latest</span></h6>
+                            <h6 class = "w3-text-blue-grey"><i class = "material-icons md-18">event_note</i>  February 25th, 2018 - <span class = "w3-tag w3-blue-grey w3-round">Latest</span></h6>
                         </div>
                     <hr />
-                        <div class = "w3-container">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <div class = "w3-container"> <!-- Don't mind my mess. I know it's bad... -->
+                            <p>Hey! This is Crimson! I kinda had an interesting idea. I just did a CTF for practice called "EasyCTF". Which was my first ever. One of the things i'm rather good at is snooping around website source code. I got into the habit of doing it to bypass things on my local newspaper.<br /><i><s>NO I DON'T WANT TO PAY FOR A SUBSCRIPTION! I JUST NEED YOU FOR SCHOOL!</s></i><br /> Well one of the problems was called "NoSource" and was listed as a 250 point question. I wanted to take that one down. But first there was a smaller one.. "NoSource Jr". So I took that one on first.</p>
+
+<p>The first thing I did when I looked at the website presented to me. Was well... Inspect Element. <i>YOU CAN'T STOP ME!</i> Gotta love when the first thing you are greeted to is:</p>
+
+<blockquote class="w3-panel w3-leftbar w3-light-grey">
+	<code class="w3-text-green"><!-- Stop looking at the source code --></code>
+</blockquote>
+
+<p>Take a look inside... and you find a variable named <code>flag</code>.</p>
+
+<blockquote class="w3-panel w3-leftbar w3-light-grey">
+	<code class="w3-text-blue" style="font-size: 0.9em">Fg4GCRoHCQ4TFh0IBxENAE4qEgwHMBsfDiwJRQImHV8GQAwBDEYvV11BCA==</code>
+</blockquote>
+
+<p>Great! So now we just throw that in the solution! Nope. Notice how the flag is base 64 encoded. Great. That's always fun. So I decode it using <code>btoa(flag);</code><br />tThat doesn't work at all. That's not even text anymore. Something is happening to it. Obviously. It's a little block of code called <code>process</code>. Which essentually xors the key and the flag! Cool so we just need to find the flag and pump this through the function. I looked at the source and found the key. <i>"nosource"</i>.  Well, lord brilliance decided, "I can bruteforce this!". I couldn't. I spent a few hours writing a bruteforcer and failed. It wouldn't have worked. So instead I popped the key and flag through the function <code>process</code>. What would you guess?! It gives text and something that at least resembles a key!</p>
+
+<blockquote class="w3-panel w3-leftbar w3-light-grey">
+	<code class="w3-text-black">xaufoujk}yngrcne EacrBxz`Cz*wT~:h/�ny4L23.{</code>
+</blockquote>
+
+<p>Okay, maybe it doesn't. But we are closer!<br />With the help of a friend I figured this bit out. Ever remember sitting in Physics. Learning how to use one formula to calculate force from mass and the force of gravity? Know how it is kind of a triangle? It's the same thing with this. Only we are dealing with our: Output, Flag and Key. So we know the flag. It's a garbled mess of base64. We don't know the key. But we do know some of the result... There is one thing constant in every single key. The string: <i>easyctf{</i>. So if we put the result in for the key. We should get the ACTUAL key! Guess what happened?! We got it.</p>
+
+<blockquote class="w3-panel w3-leftbar w3-light-grey">
+	<code class="w3-text-black">soupysouvwnqdek{+KaudD}dkMz<aR{$c!�xo2I,8 {</code>
+</blockquote>
+
+<p>I plugged in "soupy" for key and got our final result flag!</p>
+
+<blockquote class="w3-panel w3-leftbar w3-light-grey">
+	<code class="w3-text-black">easyctf{congrats!_but_now_f0r_n0s0urc3_...}</code>
+</blockquote>
+
+<p>That wasn't so bad! Onto the next one! The biggest issue for the next one, was not being able to use Firefox. That dissappointed me... I had to pull out Chrome. But looking through. YOU CAN'T USE INSPECT ELEMENT. Well, you can. But if you interact with anything, you are going to get souped. Quite literally...<br />So. moving past that... I looked through the source. Couldn't find a flag. Hmm. Must be in that login page. But you can't pull the source from it that quickly. Or so I thought. Looking through the linked StackExchange page. I saw someone say you can use a web debugger to look and pull source. Specifically Fiddler. So I downloaded Fiddler. What would you guess? I pulled the login page. Easy as pie. Thanks StackExchange! You really are the savior to all developers! Looking through the source. I quickly found the flag!</p>
+
+<blockquote class="w3-panel w3-leftbar w3-light-grey">
+	<code class="w3-text-blue" style="font-size: 0.9em">DQ4cJgsbCVofB18sNw4wRlhfCwAbXxpTC1wwKVlcGBIaUDAGJzowYDoqTiI=</code>
+</blockquote>
+
+<p>Guess what else? The SAME function was used! This means we can use our code for nosource jr on nosource! Awesome!<br />So I dialed in the Flag and <i>"easyctf{"</i> as the key! This gave me the real key! Same as last time!</p>
+
+<blockquote class="w3-panel w3-leftbar w3-light-grey">
+	<code class="w3-text-black">easyctf{wh0s_a_g00d_s0urc3_v13w3r?_YOU_ARE!}</code>
+</blockquote>
+
+<p>Checkmate.</p>
+
+<p>Source Code: <a href="https://gist.github.com/CrimsonMaple/1c04691eb9a296eb56fcad17a615177c">https://gist.github.com/CrimsonMaple/1c04691eb9a296eb56fcad17a615177c</a>
+
+<h5>Hey if you enjoyed this, please message me on Twitter! Tell me to keep this up! I really like this kinda stuff and will continue to do things like this!</h5>
                         </div>
                 </div>
             </div>
