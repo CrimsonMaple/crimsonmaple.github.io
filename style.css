@@ -13,7 +13,7 @@ p {
 }
 
 a:link {
-    color: Azure;
+    color: DarkRed;
 }
 
 /* Slim down sidebar */
@@ -32,22 +32,9 @@ a:link {
 }
 
 /* Padding because i'm lazy */
-.title-padding {
-    padding: 8px 7%!important
-}
-
-.content-padding {
-    padding-top:6%!important;
-    padding-bottom:6%!important;
-}
-
 .content-padding-mobile {
     padding-top:10%!important;
     padding-bottom:10%!important;
-}
-
-.footer-padding {
-    padding-left: 5%!important;
 }
 
 .absolute-position {
@@ -62,14 +49,6 @@ a:link {
     display: grid;
     grid-template-columns: auto auto auto auto;
     padding: .5%;
-}
-
-/* Move down to be lower than title */
-.mobile-content-top {
-    position: absolute;
-    width:100%;
-    z-index:1;
-    top: 100px; /* Kinda a hack, not the best solution out there. */
 }
 
 /* Left Margin for Sidebar */
