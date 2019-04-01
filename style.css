@@ -1,57 +1,27 @@
 body {
-    background-color: DarkSlateGrey;
+    background-color: firebrick;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Montserrat", sans-serif;
-    color: Azure;
+    color: azure;
 }
 
 p {
-    font-size: .7em;
-    color: SlateGrey;
+    font-size: 1.2em;
+    color: azure;
 }
 
 a:link {
     color: DarkRed;
 }
 
-/* Slim down sidebar */
-.w3-sidebar {
-    width: 60px;
+.btn-circle {
+  width: 15%;
+  border-radius: 50%;
 }
 
-/* Move over 60px */
-.w3-display-topleft {
-    left: 60px;
-}
-
-/* Move down to be lower than title */
-.w3-top {
-    top: 80px; /* Kinda a hack, not the best solution out there. */
-}
-
-/* Padding because i'm lazy */
-.content-padding-mobile {
-    padding-top:10%!important;
-    padding-bottom:10%!important;
-}
-
-.absolute-position {
-    position: absolute;
-}
-
-.fixed-position {
-    position: fixed;
-}
-
-.grid_container {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    padding: .5%;
-}
-
-/* Left Margin for Sidebar */
-#main {
-    margin-left: 60px;
+.custom-boxes {
+    background-color: #2b2f33;
+    border: 1px solid firebrick;
 }

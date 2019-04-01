@@ -1,183 +1,152 @@
 <!DOCTYPE html>
-
-<html>
+<!-- Rewrite of my original site hosted @ crimsonmaple.github.io using bootstrap -->
+<html lang="en">
     <head>
-        <!-- This is a comment -->
+        <!-- Original Source Code: https://github.com/CrimsonMaple/crimsonmaple.github.io -->
         <title>Crimson's Blog</title>  <!-- Title for main page -->
         <link rel="icon" href="images/favicon.png"> <!-- Icon at the left of the tab -->
-        
+
         <meta charset = "UTF-8"> <!-- Use Unicode -->
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes website mobile friendly -->
-        
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0"> <!-- Makes website mobile friendly -->
+
         <!-- Stylesheets -->
+        <!-- Bootstrap CSS: -->
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!-- w3's css -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"> <!-- Fonts -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- Material theme buttons -->
         <link rel="stylesheet" href="style.css"> <!-- My CSS -->
-        
-        <nav class="w3-sidebar w3-bar-block w3-small w3-black w3-hide-small w3-center"> <!-- Icon Bar. Use Material Icons -->
-            <a href = "index.html" class = "w3-bar-item w3-button w3-padding-16 w3-center"> <!-- Use 16px padding -->
-                <i class = "material-icons md-36">panorama_fish_eye</i> <!-- Home -->
-            </a>
-            
-            <a href = "projects.html" class = "w3-bar-item w3-button w3-padding-16 w3-center"> <!-- Use 16px padding -->
-                <i class = "material-icons md-36">laptop</i> <!-- Projects -->
-            </a>
-            
-            <a href = "games.html" class = "w3-bar-item w3-button w3-padding-16 w3-center"> <!-- Use 16px padding -->
-                <i class = "material-icons md-36">games</i> <!-- Games -->
-            </a>
-        </nav>
-        
-        <div class="w3-top w3-hide-large w3-hide-medium absolute-position" id="navbar"> <!-- Mobile Navbar -->
-            <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-                <a href="index.html" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-                
-                <a href="projects.html" class="w3-bar-item w3-button" style="width:25% !important">PROJECTS</a>
-                
-                <a href="games.html" class="w3-bar-item w3-button" style="width:25% !important">GAMES</a>
+
+        <!-- Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <!-- Webstite header and logo -->
+        <div class = "w3-display-container" style = "padding: 5px">
+            <!-- Nav Button on Right Side -->
+            <!-- https://getbootstrap.com/docs/4.3/components/dropdowns/#dropleft -->
+            <div class="dropdown">
+                <!-- Not the best way to do this, but it works. -->
+                <!-- Not a button tag, but functions as one... -->
+                <img src = "https://avatars3.githubusercontent.com/u/16071436?s=460&v=4" style = "width: 6%; border-radius: 50%; float: left" class = "w3-hover-greyscale btn w3-hide-small w3-hide-medium" data-toggle="dropdown">
+                <!-- Horizontal Mobile friendly. -->
+                <img src = "https://avatars3.githubusercontent.com/u/16071436?s=460&v=4" style = "width: 9%; border-radius: 50%; float: left; padding-right: 2%" class = "w3-hover-greyscale w3-hide-small w3-hide-large" data-toggle="dropdown">
+                <!-- Mobile friendly menu button -->
+                <img src = "https://avatars3.githubusercontent.com/u/16071436?s=460&v=4" style = "width: 15%; border-radius: 50%; float: left; padding-right: 2%" class = "w3-hover-greyscale w3-hide-large w3-hide-medium" data-toggle="dropdown">
+
+                <div class="dropdown-menu">
+                    <!-- Dropdown menu links -->
+                    <a class="dropdown-item" href="index.html">Home</a>
+                    <a class="dropdown-item" href="projects.html">Projects</a>
+                    <a class="dropdown-item" href="#">Games</a>
+                </div>
+                <!-- text-decoration documentation: https://www.w3schools.com/cssref/pr_text_text-decoration.asp -->
+                <a href = "index.html" style = "text-decoration:none">
+                    <h1 style = "font-size: 2em; padding-left: 10px; padding-top: 1%; color: Azure;">クリムゾンメイプル</h1>
+                </a>
             </div>
         </div>
+        <br>
     </head>
-    
-    <body>  
-        <div class = "w3-display-container">
-            <div class = "w3-container w3-display-topleft" style = "padding-left: 7%; padding-top: 8px;"> <!-- This is a hack that needs to be changed -->
-                <h1 style = "font-size: 2em">クリムゾンメイプル</h1>
-            </div>
-            
-            <div class = "w3-container w3-padding w3-display-topleft w3-hide-small">
-                <img src = "https://avatars3.githubusercontent.com/u/16071436?s=460&v=4" class = "w3-circle w3-hover-greyscale w3-hover-shadow" style = "width: 15%" alt = "Profile Image">
-            </div>
-            
-            <div class = "w3-container w3-padding w3-hide-large w3-hide-medium">
-                <img src = "https://avatars3.githubusercontent.com/u/16071436?s=460&v=4" class = "w3-circle w3-hover-greyscale w3-hover-shadow" style = "width: 15%" alt = "Profile Image">
-            </div>
-        
-            <!-- Main content --> <!-- Newest Content Comes First -->
-            <div class = "w3-container w3-content w3-hide-small" style="max-width:1200px; padding-top: 6%; padding-bottom: 6%;">
-                <div class = "w3-container w3-card-4 w3-white w3-margin-bottom">
-                    <h2 class = "w3-text-grey w3-padding-16">EasyCTF NoSource + NoSource Jr Writeup<h2>
-                        <div class = "w3-container">
-                            <h6 class = "w3-text-blue-grey"><i class = "material-icons md-18">event_note</i>  February 25th, 2018 - <span class = "w3-tag w3-blue-grey w3-round">Latest</span></h6>
-                        </div>
-                    <hr />
-                        <div class = "w3-container"> <!-- Don't mind my mess. I know it's bad... -->
-                            <p>Hey! This is Crimson! I kinda had an interesting idea. I just did a CTF for practice called "EasyCTF". Which was my first ever. One of the things i'm rather good at is snooping around website source code. I got into the habit of doing it to bypass things on my local newspaper.<br /><i><s>NO I DON'T WANT TO PAY FOR A SUBSCRIPTION! I JUST NEED YOU FOR SCHOOL!</s></i><br /> Well one of the problems was called "NoSource" and was listed as a 250 point question. I wanted to take that one down. But first there was a smaller one.. "NoSource Jr". So I took that one on first.</p>
+    <body>
+        <!-- Basic card stuffs -->
+        <div style = "padding: 10px">
+            <div class = "card mx-auto" style = "width: 85%;">
+                <div class = "card-header custom-boxes">
+                    <h1>Site Rewrite and Cleanup</h1>
+                    <h6><i class = "material-icons md-18 w3-text-blue-grey">event_note</i>  March 29th, 2019 - <span class = "w3-tag w3-blue-grey w3-round">Latest</span></h6>
+                </div>
+                <div class = "card-body custom-boxes" id = "text">
+                    <p>So, I was told we need to make a website for one of my projects in CS class.<br>
+                    So I obviously did the only thing one should do... Rewrite a terrible website you wrote almost a whole year ago.<br>
+                    Yes, I caved. I am using bootstrap now for this website and a hacky combination of w3's CSS. It is no longer a pure w3 site.<br><br>
+                    <em><strong>Thank goodness.</strong></em><br><br>
+                    My past site looked really nice. But there were some major issues in terms of scaling and scrolling. This makes the site infinately better and more responsive.<br>
+                    I hope these changes aren't too obtrusive.<br>
+                    With time I hope to develop this into a flexible blog site that will allow me to easily drop in a new update whenever I so feel like it.<br><br>
+                    Until then, ciao!~<br>
+                        - Crimson <br>
+                    </p>
 
-<p>The first thing I did when I looked at the website presented to me. Was well... Inspect Element. <i>YOU CAN'T STOP ME!</i> Gotta love when the first thing you are greeted to is:</p>
-
-<blockquote class="w3-panel w3-leftbar w3-light-grey">
-	<code class="w3-text-green"><!-- Stop looking at the source code --></code>
-</blockquote>
-
-<p>Take a look inside... and you find a variable named <code>flag</code>.</p>
-
-<blockquote class="w3-panel w3-leftbar w3-light-grey">
-	<code class="w3-text-blue" style="font-size: 0.9em">Fg4GCRoHCQ4TFh0IBxENAE4qEgwHMBsfDiwJRQImHV8GQAwBDEYvV11BCA==</code>
-</blockquote>
-
-<p>Great! So now we just throw that in the solution! Nope. Notice how the flag is base 64 encoded. Great. That's always fun. So I decode it using <code>btoa(flag);</code><br />tThat doesn't work at all. That's not even text anymore. Something is happening to it. Obviously. It's a little block of code called <code>process</code>. Which essentually xors the key and the flag! Cool so we just need to find the flag and pump this through the function. I looked at the source and found the key. <i>"nosource"</i>.  Well, lord brilliance decided, "I can bruteforce this!". I couldn't. I spent a few hours writing a bruteforcer and failed. It wouldn't have worked. So instead I popped the key and flag through the function <code>process</code>. What would you guess?! It gives text and something that at least resembles a key!</p>
-
-<blockquote class="w3-panel w3-leftbar w3-light-grey">
-	<code class="w3-text-black">xaufoujk}yngrcne EacrBxz`Cz*wT~:h/�ny4L23.{</code>
-</blockquote>
-
-<p>Okay, maybe it doesn't. But we are closer!<br />With the help of a friend I figured this bit out. Ever remember sitting in Physics. Learning how to use one formula to calculate force from mass and the force of gravity? Know how it is kind of a triangle? It's the same thing with this. Only we are dealing with our: Output, Flag and Key. So we know the flag. It's a garbled mess of base64. We don't know the key. But we do know some of the result... There is one thing constant in every single key. The string: <i>easyctf{</i>. So if we put the result in for the key. We should get the ACTUAL key! Guess what happened?! We got it.</p>
-
-<blockquote class="w3-panel w3-leftbar w3-light-grey">
-	<code class="w3-text-black">soupysouvwnqdek{+KaudD}dkMz<aR{$c!�xo2I,8 {</code>
-</blockquote>
-
-<p>I plugged in "soupy" for key and got our final result flag!</p>
-
-<blockquote class="w3-panel w3-leftbar w3-light-grey">
-	<code class="w3-text-black">easyctf{congrats!_but_now_f0r_n0s0urc3_...}</code>
-</blockquote>
-
-<p>That wasn't so bad! Onto the next one! The biggest issue for the next one, was not being able to use Firefox. That dissappointed me... I had to pull out Chrome. But looking through. YOU CAN'T USE INSPECT ELEMENT. Well, you can. But if you interact with anything, you are going to get souped. Quite literally...<br />So. moving past that... I looked through the source. Couldn't find a flag. Hmm. Must be in that login page. But you can't pull the source from it that quickly. Or so I thought. Looking through the linked StackExchange page. I saw someone say you can use a web debugger to look and pull source. Specifically Fiddler. So I downloaded Fiddler. What would you guess? I pulled the login page. Easy as pie. Thanks StackExchange! You really are the savior to all developers! Looking through the source. I quickly found the flag!</p>
-
-<blockquote class="w3-panel w3-leftbar w3-light-grey">
-	<code class="w3-text-blue" style="font-size: 0.9em">DQ4cJgsbCVofB18sNw4wRlhfCwAbXxpTC1wwKVlcGBIaUDAGJzowYDoqTiI=</code>
-</blockquote>
-
-<p>Guess what else? The SAME function was used! This means we can use our code for nosource jr on nosource! Awesome!<br />So I dialed in the Flag and <i>"easyctf{"</i> as the key! This gave me the real key! Same as last time!</p>
-
-<blockquote class="w3-panel w3-leftbar w3-light-grey">
-	<code class="w3-text-black">easyctf{wh0s_a_g00d_s0urc3_v13w3r?_YOU_ARE!}</code>
-</blockquote>
-
-<p>Checkmate.</p>
-
-<p>Source Code: <a href="https://gist.github.com/CrimsonMaple/1c04691eb9a296eb56fcad17a615177c" style="color:DarkRed;">https://gist.github.com/CrimsonMaple/1c04691eb9a296eb56fcad17a615177c</a>
-
-<h5 class="w3-text-black">Hey if you enjoyed this, please message me on Twitter! Tell me to keep this up! I really like this kinda stuff and will continue to do things like this!</h5>
-                    </div>
+                    <h4><em>Here is some extra stuff needed to meet the requirements for the webpage...</em></h4>
+                    <!-- TODO: Requirements -->
+                    <a href = "https://www.google.com/">Link to google</a><br>
+                    <button class = "btn btn-default">Button</button><br><br>
+                    <ul style = "color: #ffffff">
+                        <li>List of things.</li>
+                        <li>Thing 1.</li>
+                        <li>Thing 2.</li>
+                    </ul><br>
+                    <table class="table">
+                        <tr><h1 style = "font-family: verdana">table top</h1></tr>
+                        <tr><img src = "https://images.pexels.com/photos/459522/pexels-photo-459522.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"></tr>
+                        <tr><img src = "https://cdn.sandals.com/beaches/v12/images/general/destinations/home/beach.jpg" style = "width: 500px"></tr>
+                        <tr><h1>table bottom</h1></tr>
+                    </table>
                 </div>
             </div>
-                
-        <!-- Mobile Main Content --> <!-- Only Show Latest Post on Mobile -->
-            <div class = "w3-container w3-content w3-hide-large w3-hide-medium" style="max-width:1200px; padding-top: 12%; padding-bottom: 10%;">
-                <div class = "w3-container w3-card-4 w3-white w3-margin-bottom">
-                    <h2 class = "w3-text-grey w3-padding-16">EasyCTF NoSource + NoSource Jr Writeup<h2>
-                        <div class = "w3-container">
-                            <h6 class = "w3-text-blue-grey"><i class = "material-icons md-18">event_note</i>  February 25th, 2018 - <span class = "w3-tag w3-blue-grey w3-round">Latest</span></h6>
-                        </div>
-                    <hr />
-                        <div class = "w3-container"> <!-- Don't mind my mess. I know it's bad... -->
-                            <p>Hey! This is Crimson! I kinda had an interesting idea. I just did a CTF for practice called "EasyCTF". Which was my first ever. One of the things i'm rather good at is snooping around website source code. I got into the habit of doing it to bypass things on my local newspaper.<br /><i><s>NO I DON'T WANT TO PAY FOR A SUBSCRIPTION! I JUST NEED YOU FOR SCHOOL!</s></i><br /> Well one of the problems was called "NoSource" and was listed as a 250 point question. I wanted to take that one down. But first there was a smaller one.. "NoSource Jr". So I took that one on first.</p>
+        </div>
 
-<p>The first thing I did when I looked at the website presented to me. Was well... Inspect Element. <i>YOU CAN'T STOP ME!</i> Gotta love when the first thing you are greeted to is:</p>
+        <div style = "padding: 10px">
+            <div class = "card mx-auto" style = "width: 85%;">
+                <div class = "card-header custom-boxes">
+                    <h1>EasyCTF NoSource + NoSource Jr Writeup</h1>
+                    <h6><i class = "material-icons md-18 w3-text-blue-grey">event_note</i>  February 25th, 2018</h6>
+                </div>
+                <div class = "card-body custom-boxes" id = "text1">
+                    <p>Hey! This is Crimson! I kinda had an interesting idea. I just did a CTF for practice called "EasyCTF". Which was my first ever. One of the things i'm rather good at is snooping around website source code. I got into the habit of doing it to bypass things on my local newspaper.<br /><i><s>NO I DON'T WANT TO PAY FOR A SUBSCRIPTION! I JUST NEED YOU FOR SCHOOL!</s></i><br /> Well one of the problems was called "NoSource" and was listed as a 250 point question. I wanted to take that one down. But first there was a smaller one.. "NoSource Jr". So I took that one on first.</p>
 
-<blockquote class="w3-panel w3-leftbar w3-light-grey">
-	<code class="w3-text-green"><!-- Stop looking at the source code --></code>
-</blockquote>
+                    <p>The first thing I did when I looked at the website presented to me. Was well... Inspect Element. <i>YOU CAN'T STOP ME!</i> Gotta love when the first thing you are greeted to is:</p>
 
-<p>Take a look inside... and you find a variable named <code>flag</code>.</p>
+                    <blockquote class="w3-panel mx-auto" style = "background-color: firebrick; width: 60%">
+	                    <code class="w3-text-green">&lt;!-- Stop looking at the source code --&gt;</code>
+                    </blockquote>
 
-<blockquote class="w3-panel w3-leftbar w3-light-grey">
-	<code class="w3-text-blue" style="font-size: 0.9em">Fg4GCRoHCQ4TFh0IBxENAE4qEgwHMBsfDiwJRQImHV8GQAwBDEYvV11BCA==</code>
-</blockquote>
+                    <p>Take a look inside... and you find a variable named <code>flag</code>.</p>
 
-<p>Great! So now we just throw that in the solution! Nope. Notice how the flag is base 64 encoded. Great. That's always fun. So I decode it using <code>btoa(flag);</code><br />tThat doesn't work at all. That's not even text anymore. Something is happening to it. Obviously. It's a little block of code called <code>process</code>. Which essentually xors the key and the flag! Cool so we just need to find the flag and pump this through the function. I looked at the source and found the key. <i>"nosource"</i>.  Well, lord brilliance decided, "I can bruteforce this!". I couldn't. I spent a few hours writing a bruteforcer and failed. It wouldn't have worked. So instead I popped the key and flag through the function <code>process</code>. What would you guess?! It gives text and something that at least resembles a key!</p>
+                    <blockquote class="w3-panel mx-auto" style = "background-color: firebrick; width: 60%">
+	                    <code class="w3-text-blue" style="font-size: 0.9em">Fg4GCRoHCQ4TFh0IBxENAE4qEgwHMBsfDiwJRQImHV8GQAwBDEYvV11BCA==</code>
+                    </blockquote>
 
-<blockquote class="w3-panel w3-leftbar w3-light-grey">
-	<code class="w3-text-black">xaufoujk}yngrcne EacrBxz`Cz*wT~:h/�ny4L23.{</code>
-</blockquote>
+                    <p>Great! So now we just throw that in the solution! Nope. Notice how the flag is base 64 encoded. Great. That's always fun. So I decode it using <code>btoa(flag);</code><br />tThat doesn't work at all. That's not even text anymore. Something is happening to it. Obviously. It's a little block of code called <code>process</code>. Which essentually xors the key and the flag! Cool so we just need to find the flag and pump this through the function. I looked at the source and found the key. <i>"nosource"</i>.  Well, lord brilliance decided, "I can bruteforce this!". I couldn't. I spent a few hours writing a bruteforcer and failed. It wouldn't have worked. So instead I popped the key and flag through the function <code>process</code>. What would you guess?! It gives text and something that at least resembles a key!</p>
 
-<p>Okay, maybe it doesn't. But we are closer!<br />With the help of a friend I figured this bit out. Ever remember sitting in Physics. Learning how to use one formula to calculate force from mass and the force of gravity? Know how it is kind of a triangle? It's the same thing with this. Only we are dealing with our: Output, Flag and Key. So we know the flag. It's a garbled mess of base64. We don't know the key. But we do know some of the result... There is one thing constant in every single key. The string: <i>easyctf{</i>. So if we put the result in for the key. We should get the ACTUAL key! Guess what happened?! We got it.</p>
+                    <blockquote class="w3-panel mx-auto" style = "background-color: firebrick; width: 60%">
+	                    <code class="w3-text-black">xaufoujk}yngrcne EacrBxz`Cz*wT~:h/�ny4L23.{</code>
+                    </blockquote>
 
-<blockquote class="w3-panel w3-leftbar w3-light-grey">
-	<code class="w3-text-black">soupysouvwnqdek{+KaudD}dkMz<aR{$c!�xo2I,8 {</code>
-</blockquote>
+                    <p>Okay, maybe it doesn't. But we are closer!<br />With the help of a friend I figured this bit out. Ever remember sitting in Physics. Learning how to use one formula to calculate force from mass and the force of gravity? Know how it is kind of a triangle? It's the same thing with this. Only we are dealing with our: Output, Flag and Key. So we know the flag. It's a garbled mess of base64. We don't know the key. But we do know some of the result... There is one thing constant in every single key. The string: <i>easyctf{</i>. So if we put the result in for the key. We should get the ACTUAL key! Guess what happened?! We got it.</p>
 
-<p>I plugged in "soupy" for key and got our final result flag!</p>
+                    <blockquote class="w3-panel mx-auto" style = "background-color: firebrick; width: 60%">
+	                    <code class="w3-text-black">soupysouvwnqdek{+KaudD}dkMz<aR{$c!�xo2I,8 {</code>
+                    </blockquote>
 
-<blockquote class="w3-panel w3-leftbar w3-light-grey">
-	<code class="w3-text-black">easyctf{congrats!_but_now_f0r_n0s0urc3_...}</code>
-</blockquote>
+                    <p>I plugged in "soupy" for key and got our final result flag!</p>
 
-<p>That wasn't so bad! Onto the next one! The biggest issue for the next one, was not being able to use Firefox. That dissappointed me... I had to pull out Chrome. But looking through. YOU CAN'T USE INSPECT ELEMENT. Well, you can. But if you interact with anything, you are going to get souped. Quite literally...<br />So. moving past that... I looked through the source. Couldn't find a flag. Hmm. Must be in that login page. But you can't pull the source from it that quickly. Or so I thought. Looking through the linked StackExchange page. I saw someone say you can use a web debugger to look and pull source. Specifically Fiddler. So I downloaded Fiddler. What would you guess? I pulled the login page. Easy as pie. Thanks StackExchange! You really are the savior to all developers! Looking through the source. I quickly found the flag!</p>
+                    <blockquote class="w3-panel mx-auto" style = "background-color: firebrick; width: 60%">
+	                    <code class="w3-text-black">easyctf{congrats!_but_now_f0r_n0s0urc3_...}</code>
+                    </blockquote>
 
-<blockquote class="w3-panel w3-leftbar w3-light-grey">
-	<code class="w3-text-blue" style="font-size: 0.9em">DQ4cJgsbCVofB18sNw4wRlhfCwAbXxpTC1wwKVlcGBIaUDAGJzowYDoqTiI=</code>
-</blockquote>
+                    <p>That wasn't so bad! Onto the next one! The biggest issue for the next one, was not being able to use Firefox. That dissappointed me... I had to pull out Chrome. But looking through. YOU CAN'T USE INSPECT ELEMENT. Well, you can. But if you interact with anything, you are going to get souped. Quite literally...<br />So. moving past that... I looked through the source. Couldn't find a flag. Hmm. Must be in that login page. But you can't pull the source from it that quickly. Or so I thought. Looking through the linked StackExchange page. I saw someone say you can use a web debugger to look and pull source. Specifically Fiddler. So I downloaded Fiddler. What would you guess? I pulled the login page. Easy as pie. Thanks StackExchange! You really are the savior to all developers! Looking through the source. I quickly found the flag!</p>
 
-<p>Guess what else? The SAME function was used! This means we can use our code for nosource jr on nosource! Awesome!<br />So I dialed in the Flag and <i>"easyctf{"</i> as the key! This gave me the real key! Same as last time!</p>
+                    <blockquote class="w3-panel mx-auto" style = "background-color: firebrick; width: 60%">
+	                    <code class="w3-text-blue" style="font-size: 0.9em">DQ4cJgsbCVofB18sNw4wRlhfCwAbXxpTC1wwKVlcGBIaUDAGJzowYDoqTiI=</code>
+                    </blockquote>
 
-<blockquote class="w3-panel w3-leftbar w3-light-grey">
-	<code class="w3-text-black">easyctf{wh0s_a_g00d_s0urc3_v13w3r?_YOU_ARE!}</code>
-</blockquote>
+                    <p>Guess what else? The SAME function was used! This means we can use our code for nosource jr on nosource! Awesome!<br />So I dialed in the Flag and <i>"easyctf{"</i> as the key! This gave me the real key! Same as last time!</p>
 
-<p>Checkmate.</p>
+                    <blockquote class="w3-panel mx-auto" style = "background-color: firebrick; width: 60%">
+	                    <code class="w3-text-black">easyctf{wh0s_a_g00d_s0urc3_v13w3r?_YOU_ARE!}</code>
+                    </blockquote>
 
-<p>Source Code: <a href="https://gist.github.com/CrimsonMaple/1c04691eb9a296eb56fcad17a615177c" style="color:DarkRed;">https://gist.github.com/CrimsonMaple/1c04691eb9a296eb56fcad17a615177c</a>
+                    <p>Checkmate.</p>
 
-<h5 class="w3-text-black">Hey if you enjoyed this, please message me on Twitter! Tell me to keep this up! I really like this kinda stuff and will continue to do things like this!</h5>
-                        </div>
+                    <p>Source Code: <a href="https://gist.github.com/CrimsonMaple/1c04691eb9a296eb56fcad17a615177c" style="color:DarkRed;">https://gist.github.com/CrimsonMaple/1c04691eb9a296eb56fcad17a615177c</a>
+
+                    <h5>Hey if you enjoyed this, please message me on Twitter! Tell me to keep this up! I really like this kinda stuff and will continue to do things like this!</h5>
                 </div>
             </div>
+        </div>
     </body>
 </html>
