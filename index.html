@@ -24,7 +24,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
         <!-- Webstite header and logo -->
-        <div class = "w3-display-container" style = "padding: 5px">
+        <div class = "w3-display-container" id = "header">
             <!-- Nav Button on Right Side -->
             <!-- https://getbootstrap.com/docs/4.3/components/dropdowns/#dropleft -->
             <div class="dropdown">
@@ -36,11 +36,11 @@
                 <!-- Mobile friendly menu button -->
                 <img src = "https://avatars3.githubusercontent.com/u/16071436?s=460&v=4" style = "width: 15%; border-radius: 50%; float: left; padding-right: 2%" class = "w3-hover-greyscale w3-hide-large w3-hide-medium" data-toggle="dropdown">
 
-                <div class="dropdown-menu">
+                <div class="dropdown-menu" id = "dropdown">
                     <!-- Dropdown menu links -->
-                    <a class="dropdown-item" href="index.html">Home</a>
-                    <a class="dropdown-item" href="projects.html">Projects</a>
-                    <a class="dropdown-item" href="#">Games</a>
+                    <a class="dropdown-item" href="index.html" style="color: firebrick">Home</a>
+                    <a class="dropdown-item" href="projects.html" style="color: firebrick">Projects</a>
+                    <a class="dropdown-item" href="#" style="color: firebrick">Games</a>
                 </div>
                 <!-- text-decoration documentation: https://www.w3schools.com/cssref/pr_text_text-decoration.asp -->
                 <a href = "index.html" style = "text-decoration:none">
@@ -61,12 +61,12 @@
                     <h1>Site Rewrite and Cleanup</h1>
                     <h6><i class = "material-icons md-18 w3-text-blue-grey">event_note</i>  March 29th, 2019 - <span class = "w3-tag w3-blue-grey w3-round">Latest</span></h6>
                 </div>
-                <div class = "card-body custom-boxes" id = "text">
+                <div class = "card-body custom-boxes">
                     <p>So, I was told we need to make a website for one of my projects in CS class.<br>
                     So I obviously did the only thing one should do... Rewrite a terrible website you wrote almost a whole year ago.<br>
                     Yes, I caved. I am using bootstrap now for this website and a hacky combination of w3's CSS. It is no longer a pure w3 site.<br><br>
                     <em><strong>Thank goodness.</strong></em><br><br>
-                    My past site looked really nice. But there were some major issues in terms of scaling and scrolling. This makes the site infinately better and more responsive.<br>
+                    My past site looked really nice. But there were some major issues in terms of scaling and scrolling. This makes the site infinitely better and more responsive.<br>
                     I hope these changes aren't too obtrusive.<br>
                     With time I hope to develop this into a flexible blog site that will allow me to easily drop in a new update whenever I so feel like it.<br><br>
                     Until then, ciao!~<br>

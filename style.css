@@ -25,3 +25,11 @@ a:link {
     background-color: #2b2f33;
     border: 1px solid firebrick;
 }
+
+#header {
+    padding: 5px;
+}
+
+#dropdown {
+    background-color: #2b2f33;
+}
