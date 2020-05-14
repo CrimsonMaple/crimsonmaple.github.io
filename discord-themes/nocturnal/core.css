@@ -30,9 +30,9 @@ This altered version by CrimsonMaple is meant for personal use only.
 	--backgroundDark: rgba(0, 0, 0, .13);
     --backgroundDarkAlt: rgba(0, 0, 0, .35);
 	--backgroundDarker: rgba(20, 23, 31, 0.9);
-    --primary: #E3242B; /* Crimson Red */
+    --primary: var(--primaryAccent); /* Crimson Red */
 	--primaryGradient1: var(--primary);
-	--primaryGradient2: #008ae6; /*#420c09;*/
+	--primaryGradient2: var(--secondaryAccent); /*#420c09;*/
 	--DangerColor: #dc3545;
 	--WarningColor: #ffc107;
 	--SuccesColor: #28a745;

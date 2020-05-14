@@ -15,7 +15,7 @@
 	--dfont:						Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
 	--dtextshadow:					transparent;
 	
-	--dbackground:					url(https://images3.alphacoders.com/704/704387.png);
+	--dbackground:					var(--backgroundImage);
 	--dbackgroundsize:				cover;
 	--dblur:						0px;
 	--dbackdrop:					rgba(0,0,0,0.85);
