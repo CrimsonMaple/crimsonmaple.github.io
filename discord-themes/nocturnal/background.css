@@ -1,0 +1,185 @@
+//META{"name":"Background","description":"Enables a (hacky) background for discord. For use with my theme only.","author":"Crimson","version":"1.0"}*//{}
+
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/BetterDocsBlock.css);
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/ThemeDevBadge.css);
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/BlurpleRecolor/BlurpleRecolor.css);
+
+:root {
+	--dtransparencyalpha:			0,0,0;
+	--dgeneraltransparency:			0.15;
+	--dmessagetransparency:			0.5;
+	--dguildchanneltransparency:	0.15;
+	--dmemberlisttransparency:		0.0;
+	--daccentcolor:					190,78,180;
+	
+	--dfont:						Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+	--dtextshadow:					transparent;
+	
+	--dbackground:					url(https://images3.alphacoders.com/704/704387.png);
+	--dbackgroundsize:				cover;
+	--dblur:						0px;
+	--dbackdrop:					rgba(0,0,0,0.85);
+
+	--vtransparencycolor:			var(--transparencycolor,			var(--dtransparencycolor));
+	--vtransparencyalpha:			var(--transparencyalpha,			var(--dtransparencyalpha));
+	--vmessagetransparency:			var(--messagetransparency,			var(--dmessagetransparency));
+	--vusechatbubbles: 				calc(var(--vmessagetransparency) / (var(--vmessagetransparency) + 0.00000000000000000000001));
+	--vguildchanneltransparency:	var(--guildchanneltransparency,		var(--dguildchanneltransparency));
+	--vmemberlisttransparency:		var(--memberlisttransparency,		var(--dmemberlisttransparency));
+	--vaccentcolor:					var(--accentcolor,					var(--daccentcolor));
+	--vlinkcolor:					var(--vaccentcolor);
+	
+	--vfont:						var(--font,							var(--dfont));
+	--vtextshadow:					var(--textshadow,					var(--dtextshadow));
+	
+	--vbackground:					var(--background,					var(--dbackground));
+	--vbackgroundsize:				var(--backgroundsize,				var(--dbackgroundsize));
+	--vbackgroundblur:				var(--backgroundblur,				var(--dblur));
+	
+	--vpopout:						var(--popout,						var(--vbackground));
+	--vpopoutsize:					var(--popoutsize,					var(--vbackgroundsize));
+	--vpopoutblur:					var(--popoutblur,					var(--vbackgroundblur));
+	
+	--vbackdrop:					var(--backdrop,						var(--dbackdrop));
+	--vbackdropsize:				var(--backdropsize,					var(--vbackgroundsize));
+	--vbackdropblur:				var(--backdropblur,					var(--vbackgroundblur));
+
+	--fontwhite1: 					255,255,255;
+	--fontwhite2: 					210,210,210;
+	--fontwhite3: 					170,170,170;
+	--fontwhite4: 					120,120,120;
+}
+
+.theme-light, .theme-dark {
+	--header-primary: rgb(var(--fontwhite1));
+	--header-secondary: rgb(var(--fontwhite2));
+	--text-normal: rgb(var(--fontwhite2));
+	--text-muted: rgb(var(--fontwhite4));
+	--channels-default: rgb(var(--fontwhite4));
+	--interactive-normal: rgb(var(--fontwhite3));
+	--interactive-hover: rgb(var(--fontwhite2));
+	--interactive-active: rgb(var(--fontwhite1));
+	--interactive-muted: rgb(var(--fontwhite4));
+	--elevation-low: 0 1px 5px 0 rgba(var(--vtransparencycolor), 0.3);
+	--elevation-high: 0 2px 10px 0 rgba(var(--vtransparencycolor), 0.3);
+	--logo-primary: rgb(var(--fontwhite1));
+}
+
+
+/* ~~~~		0.		TABLE OF CONTENTS				~~~~ */
+/*
+	1.	TRANSPARENCY
+	2.	BACKGROUND
+    3.	WORDMARK
+*/
+
+
+/* ~~~~		1.		TRANSPARENCY					~~~~ */
+
+body,														/* body														*/
+#app-mount .app-1q1i1E,										/* app					container							*/
+#app-mount .app-2rEoOp,										/* app					inner								*/
+#app-mount .container-16j22k,								/* app					loadingscreen						*/
+#app-mount .bg-h5JY_x,										/* app					background							*/
+#app-mount .layer-3QrUeG,									/* layer				container							*/
+#app-mount .container-PNkimc,								/* channels				inner								*/
+#app-mount .privateChannels-1nO12o,							/* dmchannels												*/
+#app-mount .panels-j1Uci_ > *,								/* account/voice		inner								*/
+#app-mount .chat-3bRxxu,									/* chat					container							*/
+#app-mount .noChannel-Z1DQK7,								/* nochannel												*/
+#app-mount .content-MLh4nU,									/* unavailable												*/
+#app-mount .container-1D34oG,								/* peoples													*/
+#app-mount .applicationStore-1pNvnv,						/* nitro													*/
+#app-mount .pageWrapper-1PgVDX,								/* guilddiscovery											*/
+#app-mount .scroller-2FKFPG,								/* scroller													*/
+#app-mount .standardSidebarView-3F1I7i,						/* settings													*/
+#app-mount .contentRegion-3nDuYy {							/* settings				content								*/
+	background: transparent;
+}
+
+#app-mount .sidebarRegion-VFTUkN {							/* settings				sidebar								*/
+	background-color: rgba(var(--vtransparencycolor), 0.2);
+}
+
+#app-mount {												/* app-mount												*/
+	background-color: rgba(var(--vtransparencycolor), var(--vtransparencyalpha));
+}
+
+#app-mount .wrapper-1Rf91z {								/* guilds				container							*/
+	background-color: rgba(var(--vtransparencycolor), calc(var(--vguildchanneltransparency) * 2));
+}
+
+#app-mount .panels-j1Uci_ {									/* account/voice		container							*/
+	background-color: rgba(var(--vtransparencycolor), calc(var(--vguildchanneltransparency) / 1.5));
+}
+#app-mount .container-1r6BKw.themed-ANHk51 {				/* channelheader		container							*/
+	background-color: rgba(var(--vtransparencycolor), var(--vguildchanneltransparency));
+}
+#app-mount .membersWrap-2h-GB4 {							/* members				container							*/
+	background-color: rgba(var(--vtransparencycolor), var(--vmemberlisttransparency));
+}
+#app-mount .nowPlayingColumn-2sl4cE {						/* peoples				now playing							*/
+	background-color: rgba(var(--vtransparencycolor), var(--vmemberlisttransparency));
+}
+
+.themeDark-3Ap_7i, .themeLight-2aS1dz {						/* errorscreen												*/
+	background-color: transparent;
+	color: rgb(var(--fontwhite1));
+}
+#app-mount .note-450gs3 {
+	color: rgb(var(--fontwhite2));
+}
+#app-mount .image-3zK3Wt {
+	background-image: url(https://discordapp.com/assets/e9baf4b505eb54129f832556ea16538e.svg);
+	opacity: 0.6;
+}
+
+
+/* ~~~~		2.		BACKGROUND						~~~~ */
+
+body:before {
+	content: "";
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: fixed;
+	background: var(--vbackground) center/var(--vbackgroundsize);
+	filter: blur(var(--vbackgroundblur));
+}
+#ace_settingsmenu_container,
+.uploadArea-3QgLtW,
+.backdropWithLayer-3_uhz4,
+.backdrop-1wrmKB {
+	background: var(--vbackdrop) center/var(--vbackdropsize) !important;
+	filter: blur(var(--vbackdropblur));
+	opacity: 1;
+	animation: none;
+}
+.backdropWithLayer-3_uhz4 {
+	z-index: -1;
+}
+
+/* ~~~~		3.		WORDMARK						~~~~ */
+
+html:only-child > head + body > div#app-mount.appMount-3lHmkl > div.typeWindows-1za-n7.titleBar-AC4pGV.horizontalReverse-3tRjY7.flex-1O1GKY.directionRowReverse-m8IjIq.justifyStart-2NDFzi.alignStretch-DpGPf3 > div.wordmark-2iDDfm {
+	color: white !important;
+	display: block !important;
+	position: absolute !important;
+	max-width: unset !important;
+	min-width: unset !important;
+	width: 55px !important;
+	max-height: unset !important;
+	min-height: unset !important;
+	height: 16px !important;
+	margin: 0 !important;
+	padding: 3px 9px 3px !important;
+	top: 0 !important;
+	left: 0 !important;
+	bottom: unset !important;
+	right: unset !important;
+	opacity: 0.6 !important;
+	visibility: visible !important;
+	transform: unset !important;
+	animation: unset !important;
+}
