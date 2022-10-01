@@ -1,0 +1,31 @@
+---
+layout: default
+title: My Projects
+permalink: /projects/
+---
+
+<!-- begin projects -->
+<section class="projects">
+
+  <div class="projects__head">
+    <h1 class="projects__title">{{ page.title }}</h1>
+  </div>
+
+  <div class="projects__inner animate">
+    <div class="container">
+      <div class="row">
+        {% for project in site.projects %}
+        <div class="col col-4 col-d-6 col-t-12">
+          <div class="projects__info">
+            <a class="projects__image" href="{{ project.url }}"><img class="lazy" data-src="{{ project.image-icon }}" alt="{{ project.name }}"></a>
+            <h2 class="projects__name"><a class="projects__link" href="{{ project.url }}">{{ project.name }}</a></h2>
+            <p class="projects__description">{{ project.alt-text }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+</section>
+<!-- end projects -->
