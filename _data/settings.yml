@@ -23,7 +23,7 @@ menu__settings:
     - title: 'Home'
       url: '/'
     - title: 'Projects'
-      url: '/Projects'
+      url: '/projects'
 
 
 
@@ -56,7 +56,7 @@ footer__menu__settings:
     - title: 'Home'
       url: '/'
     - title: 'Projects'
-      url: '/Projects'
+      url: '/projects'
 
 
 # Social Links
