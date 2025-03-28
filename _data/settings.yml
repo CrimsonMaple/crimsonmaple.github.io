@@ -11,8 +11,8 @@ permalink: '/'
 author:
   author__name: Crimson
   author__name_alt: Crimson (CrimsonMaple)
-  author__pronouns: They/Them
-  author__bio: Prospective Embedded Systems Pentester looking to make a change in the world and break some computers in doing so. Former Computer Security Major @ RIT and Hobbiest 3ds Developer.
+  author__pronouns: She/They
+  author__bio: Pentester looking to make a change in the world and break some computers in doing so. Computer Security Major @ RIT and Hobbiest 3ds Developer.
   author__avatar: https://avatars.githubusercontent.com/u/16071436?v=4
 
 
@@ -63,6 +63,7 @@ footer__menu__settings:
 social:
 - {icon: "ion-logo-twitter", color: "#55acee", name: Twitter, link: "https://twitter.com/Crims0nKaede"}
 - {icon: "ion-logo-github", name: Github, link: "https://github.com/CrimsonMaple"}
+- {icon: "ion-logo-cloudy", name: Bluesky, link: "https://bsky.app/profile/crimson.ninja"}
 
 #- {icon: "ion-logo-facebook", color: "#3b5999", name: Facebook, link: "https://facebook.com"}
 #- {icon: "ion-logo-pinterest", color: "#bd081c", name: Pinterest, link: "https://pinterest.com"}
